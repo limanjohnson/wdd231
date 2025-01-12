@@ -121,23 +121,30 @@ footer {
 /* FORMS */
 
 /* HEADER */
+
+header, .ln-nav-container {
+    position: static; /* Ensure these do not interfere */
+    overflow: visible;
+}
+
 #menu {
     font-size: 1em;
     border: 0;
     background: none;
     color: #000;
-    position: fixed;
-    right: 10px;
-    top: 5%;
+    position: fixed; /* Fix the button position */
+    right: 10px; /* Position it 10px from the right edge */
+    top: 10px; /* Adjust to ensure it's at the top of the screen */
+    z-index: 1000; /* Ensure it stays on top of other elements */
     transition: transform 0.3s ease;
 }
 
 #menu::before {
-    content: "☰";
+    content: "☰"; /* Default hamburger icon */
 }
 
 #menu.open::before {
-    content: "x";
+    content: "x"; /* Changes to "x" when menu is open */
 }
 
 .ln-header-container h1,
@@ -201,7 +208,7 @@ footer {
 
 a.active {
     background-color: #fff;
-    color: #699EC6;
+    color: #132A13;
 }
 
 /* IMAGES */
