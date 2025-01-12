@@ -1,0 +1,182 @@
+/* ============== */
+/* Base Styles    */
+/* ============== */
+
+/* CSS RESET */
+
+a:link, a:visited {
+    text-decoration:none;
+    color:inherit;
+}
+
+li {
+    list-style:none;
+}
+
+/* DEFAULT TYPOGRAPHY */
+
+h1 {
+    font-size:3em;
+}
+
+h2 {
+    font-size:2em;
+}
+
+/* GENERAL UTILITIES */
+
+/* ================= */
+/* Layout Styles     */
+/* ================= */
+
+/* GRID SYSTEM */
+
+.ln-header-container {
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+    justify-items: center;
+}
+
+/* HEADER CONTAINER */
+
+header {
+    padding:2em 0 0 0;
+}
+
+/* BODY */
+
+body {
+    background-color:#ECF39E;
+}
+
+/* PAGE LAYOUT */
+
+/* MAIN */
+
+section {
+    background-color:#132A13;
+    color:white;
+    padding:2em 0;
+    text-align:center;
+}
+
+/* FOOTER */
+
+footer {
+    display:flex;
+    justify-content:center;
+    padding:2em 0;
+    flex-direction: column;
+    align-items: center;
+    margin-left:2em;
+    margin-right:2em;
+}
+
+
+/* ================= */
+/* Components        */
+/* ================= */
+
+/* BUTTONS */
+
+/* FORMS */
+
+/* HEADER */
+
+#menu {
+    font-size:1em;
+    border:0;
+    background:none;
+    color:#000;
+    position:fixed;
+    right:10px;
+    top:5%;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "x";
+}
+
+.ln-header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ln-header-container h1,
+.ln-header-container h2 {
+    text-align: center;
+}
+
+/* NAVIGATION */
+
+.ln-nav-container {
+    background-color:#132A13;
+    color:white;
+}
+
+.navigation {
+    display:flex;
+    justify-content:space-around;
+    max-width:1200px;
+    margin:0 auto;
+    padding: .5em 0
+}
+
+
+
+.navigation.open {
+    max-height: 485px;
+}
+
+.navigation a {
+    display: none;
+    padding:1rem;
+    Text-align:center;
+    text-decoration:none;
+    color:#fff;
+}
+
+.navigation.open a {
+    display:flex;
+    align-items:center;
+
+}
+
+.navigation a:hover {
+    background-color:#fff;
+    color: #699ec9;;
+}
+
+.open a {
+    display: block;
+}
+
+.active {
+    background-color:#fff;
+}
+
+a.active {
+    background-color: #fff;
+    color:#699EC6
+}
+
+
+
+/* IMAGES */
+.ln-header-container img {
+    height:200px;
+}
+
+/* ================= */
+/* Utilities         */
+/* ================= */
+
+/* FLEXBOX */
+
+/* VISIBILITY */
+
+/* HELPERS */
