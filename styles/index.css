@@ -60,6 +60,12 @@ section {
     text-align:center;
 }
 
+.place img {
+    width:300px;
+    height:300px;
+    margin:2em 0;
+}
+
 /* FOOTER */
 
 footer {
