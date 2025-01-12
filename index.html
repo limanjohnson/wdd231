@@ -2,18 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Liam Nell">
     <meta name="description" content=
             "Course Home
             WDD231 Web Frontend Development
             Liam Nell">
-    <title>Course Home</title>
+    <title>Course Home | Liam Nell</title>
 
     <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/index-desktop.css">
     <link rel="stylesheet" href="styles/index.css">
 
     <script src="scripts/lastmodified.js" defer></script>
     <script src="scripts/hamburger-menu.js" defer></script>
+    <script src="scripts/ln-courses-completed.js" defer></script>
 
 </head>
 <body>
@@ -24,7 +27,6 @@
         </div>
         <div>
             <h1>Liam Nell</h1>
-            <h2>Web Frontend Development</h2>
         </div>
     </div>
     <div class="ln-nav-container">
@@ -45,8 +47,16 @@
         <h2>Durban, South Africa</h2>
         <img src="images/south_africa_coast_horizontal.jpg" alt="Coast of South Africa">
     </section>
-    <section>
+    <section class="ln-courses-container">
         <h2>Web and Computer Programming Certificate</h2>
+        <div class="ln-select-courses">
+            <button id="ln-all-courses">All</button>
+            <button id="ln-wdd-courses">WDD Courses</button>
+            <button id="ln-cse-courses">CSE Courses</button>
+        </div>
+        <div id="ln-course-list">
+
+        </div>
     </section>
 
 </main>

@@ -1,0 +1,52 @@
+@media screen and (min-width: 651px) {
+    /* ============= NAVIGATION STYLES ============= */
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        max-height: none;
+        overflow: visible;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    /* ============= HEADER STYLES ============= */
+    .ln-header-container h1 {
+        margin-right: 0;
+    }
+
+    /* ============= MAIN GRID LAYOUT ============= */
+    main {
+        display: grid;
+        grid-template-columns: 3fr 2fr; /* 3:2 column ratio for main content */
+    }
+
+    .ln-courses-container {
+        grid-column-start: span 2; /* Span both columns */
+    }
+
+    /* ============= COURSE SELECTION BUTTONS ============= */
+    .ln-select-courses {
+        display: flex;
+        flex-direction: row !important;
+        justify-content: center; /* Center the buttons for better alignment */
+    }
+
+    .ln-select-courses button {
+        padding: 1em 2em !important;
+        margin: 1em !important;
+    }
+
+    /* ============= IMAGES ============= */
+    .place img {
+        width: 100%;
+    }
+
+    /* ============= COURSE LIST STYLES ============= */
+    div#ln-course-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+        gap: 1em; /* Add spacing between grid items */
+    }
+}

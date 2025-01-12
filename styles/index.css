@@ -1,102 +1,127 @@
-/* ============== */
-/* Base Styles    */
-/* ============== */
+/* ======================= */
+/* Base Styles & Utilities */
+/* ======================= */
 
 /* CSS RESET */
-
 a:link, a:visited {
-    text-decoration:none;
-    color:inherit;
+    text-decoration: none;
+    color: inherit;
 }
 
 li {
-    list-style:none;
+    list-style: none;
 }
 
-/* DEFAULT TYPOGRAPHY */
+/* FLEXBOX */
+.ln-select-courses {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
+/* VISIBILITY */
+
+/* HELPERS */
+
+/* DEFAULT TYPOGRAPHY */
 h1 {
-    font-size:3em;
+    font-size: 3em;
 }
 
 h2 {
-    font-size:2em;
+    font-size: 2em;
+    margin-top:.5em;
 }
-
-/* GENERAL UTILITIES */
 
 /* ================= */
 /* Layout Styles     */
 /* ================= */
 
 /* GRID SYSTEM */
-
 .ln-header-container {
-    display:grid;
+    display: grid;
     grid-template-columns: 1fr 2fr;
     justify-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* HEADER CONTAINER */
-
 header {
-    padding:2em 0 0 0;
+    padding: 2em 0 0 0;
 }
 
 /* BODY */
-
 body {
-    background-color:#ECF39E;
+    background-color: #ECF39E;
 }
 
 /* PAGE LAYOUT */
 
 /* MAIN */
-
 section {
-    background-color:#132A13;
-    color:white;
-    padding:2em 0;
-    text-align:center;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+section h2 {
+    background-color: #132A13;
+    color: white;
+    padding: 1em;
 }
 
 .place img {
-    width:300px;
-    height:300px;
-    margin:2em 0;
+    width: 450px;
+    height: auto;
+    margin: 2em 0;
+}
+
+.course {
+    padding: 1em;
+    margin: 0.5em 0;
+    background-color: #fff;
+    border: 2px solid #90a955;
+}
+
+.course-completed {
+    background-color: #90a955;
 }
 
 /* FOOTER */
-
 footer {
-    display:flex;
-    justify-content:center;
-    padding:2em 0;
+    display: flex;
+    justify-content: center;
+    padding: 2em 0;
     flex-direction: column;
     align-items: center;
-    margin-left:2em;
-    margin-right:2em;
+    margin-left: 2em;
+    margin-right: 2em;
+    text-align: center;
 }
-
 
 /* ================= */
 /* Components        */
 /* ================= */
 
 /* BUTTONS */
+.ln-select-courses button {
+    padding: 2em 5em;
+    margin: 2em;
+}
 
 /* FORMS */
 
 /* HEADER */
-
 #menu {
-    font-size:1em;
-    border:0;
-    background:none;
-    color:#000;
-    position:fixed;
-    right:10px;
-    top:5%;
+    font-size: 1em;
+    border: 0;
+    background: none;
+    color: #000;
+    position: fixed;
+    right: 10px;
+    top: 5%;
+    transition: transform 0.3s ease;
 }
 
 #menu::before {
@@ -107,32 +132,29 @@ footer {
     content: "x";
 }
 
-.ln-header-container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
 .ln-header-container h1,
 .ln-header-container h2 {
     text-align: center;
 }
 
-/* NAVIGATION */
+.ln-header-container h1 {
+    margin-right: 1em;
+}
 
+/* NAVIGATION */
 .ln-nav-container {
-    background-color:#132A13;
-    color:white;
+    background-color: #132A13;
+    color: white;
 }
 
 .navigation {
-    display:flex;
-    justify-content:space-around;
-    max-width:1200px;
-    margin:0 auto;
-    padding: .5em 0
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    transition: max-height 0.5s ease-in-out;
 }
-
-
 
 .navigation.open {
     max-height: 485px;
@@ -140,21 +162,25 @@ footer {
 
 .navigation a {
     display: none;
-    padding:1rem;
-    Text-align:center;
-    text-decoration:none;
-    color:#fff;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    transition: .5s;
 }
 
 .navigation.open a {
-    display:flex;
-    align-items:center;
-
+    display: flex;
+    align-items: center;
 }
 
 .navigation a:hover {
-    background-color:#fff;
-    color: #699ec9;;
+    background-color: #fff;
+    color: #132A13;
+}
+
+.navigation a.active {
+    border-bottom: 2px solid #90a955;
 }
 
 .open a {
@@ -162,27 +188,15 @@ footer {
 }
 
 .active {
-    background-color:#fff;
+    background-color: #fff;
 }
 
 a.active {
     background-color: #fff;
-    color:#699EC6
+    color: #699EC6;
 }
-
-
 
 /* IMAGES */
 .ln-header-container img {
-    height:200px;
+    height: 150px;
 }
-
-/* ================= */
-/* Utilities         */
-/* ================= */
-
-/* FLEXBOX */
-
-/* VISIBILITY */
-
-/* HELPERS */
