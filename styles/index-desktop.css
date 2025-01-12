@@ -1,4 +1,15 @@
 @media screen and (min-width: 651px) {
+
+    /* ============= TYPOGRAPHY ============= */
+
+    h1 {
+        font-size: 3em !important;
+    }
+
+    h2 {
+        font-size: 1.75em !important;
+    }
+
     /* ============= NAVIGATION STYLES ============= */
     .navigation {
         display: flex;

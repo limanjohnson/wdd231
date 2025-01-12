@@ -33,11 +33,11 @@ p {
     font-family: 'Lato', sans-serif;
 }
 h1 {
-    font-size: 3em;
+    font-size: 2em;
 }
 
 h2 {
-    font-size: 2em;
+    font-size: 1.5em;
     margin-top:.5em;
 }
 
@@ -79,10 +79,15 @@ section h2 {
     padding: 1em;
 }
 
+.course-work div {
+    height: 300px;
+    background-color: #fff;
+}
+
+
 .place img {
     width: 450px;
     height: auto;
-    margin: 2em 0;
 }
 
 .course {
