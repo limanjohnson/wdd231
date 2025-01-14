@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Liam Nell">
+    <meta name="description"
+          content="WDD 231 - Web Frontend Development
+        Liam Nell
+        This page is created for the purpose of learning and practicing principles of JavaScript, Html and CSS.
+            ">
+    <meta name="keywords" content="HTML, CSS, JavaScript, WDD231, Liam Nell">
+    <title>Course Home | Liam Nell</title>
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/index-desktop.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/swiper.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+    <script src="scripts/lastmodified.js" defer></script>
+    <script src="scripts/hamburger-menu.js" defer></script>
+    <script src="scripts/ln-courses-completed.js" defer></script>
+
+</head>
+<body>
+<header>
+    <div class="ln-header-container">
+        <div>
+            <img src="images/liam_photo.JPG" alt="Liam Nell Photo" loading="lazy">
+        </div>
+        <div>
+            <h1>Course Home | Liam Nell</h1>
+        </div>
+    </div>
+    <div class="ln-nav-container">
+        <button id="menu" aria-label="Menu Button"></button>
+        <nav class="navigation">
+            <a href="#">Home</a>
+            <a href="#">Chamber</a>
+            <a href="https://github.com/limanjohnson" target="_blank">GitHub Profile</a>
+            <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+        </nav>
+    </div>
+</header>
+<main>
+    <section class="course-work">
+        <h2>Course Work</h2>
+        <div>
+            <p></p>
+        </div>
+    </section>
+    <section class="place">
+        <h2>Durban, South Africa</h2>
+        <img src="images/south_africa_coast_horizontal.jpg" alt="Coast of South Africa" loading="lazy">
+    </section>
+    <section class="ln-courses-container">
+        <h2>Web and Computer Programming Certificate</h2>
+        <div class="ln-select-courses">
+            <button id="ln-all-courses" aria-label="All Courses">All Courses</button>
+            <button id="ln-wdd-courses" aria-label="Web Development Courses">WDD Courses</button>
+            <button id="ln-cse-courses" aria-label="Computer Science Courses">CSE Courses</button>
+        </div>
+        <div id="ln-course-list">
+
+        </div>
+    </section>
+
+</main>
+<footer>
+    <p class="footer-line">
+        <span id="currentyear"></span> <span class="footer-space">&bull;</span> Liam Nell <span class="footer-space">&bull;</span> Utah
+    </p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+</footer>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        effect: "fade",
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+</script>
+
+</body>
+</html>
