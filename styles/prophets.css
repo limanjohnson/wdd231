@@ -6,6 +6,13 @@ header {
     text-align: center;
 }
 
+section {
+    background-color: lightblue;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+}
+
 #cards {
     display: flex;
     flex-wrap: wrap;
