@@ -19,7 +19,7 @@ const displayProphets = (prophets) => {
 
         fullName.innerText = `${prophet.name}`
 
-        portrait.setAttribute('src', `${imageurl}`);
+        portrait.setAttribute('src', `${prophet.imageurl}`);
         portrait.setAttribute('alt', `Portrait of ${prophet.name}`);
         portrait.setAttribute('loading', 'lazy');
         portrait.setAttribute('width', '200');
@@ -34,3 +34,4 @@ const displayProphets = (prophets) => {
 }
 
 getProphetDate();
+displayProphets();
