@@ -11,7 +11,7 @@ async function getProphetData() {
 
 }
 
-getProphetData();
+getProphetData()
 
 const displayProphets = (prophets) => {
     prophets.forEach((prophet) => {
