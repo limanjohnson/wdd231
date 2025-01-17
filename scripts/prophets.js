@@ -3,7 +3,7 @@
 const url = 'https://brotherblazzard.github.io/canvas-content/latter-day-prophets.json';
 const cards = document.getElementById('#cards');
 
-async function getProphetDate() {
+async function getProphetData() {
     const response = await fetch(url);
     const data = await response.json();
     // console.table(data.prophets);
@@ -11,9 +11,11 @@ async function getProphetDate() {
 
 }
 
+getProphetData();
+
 const displayProphets = (prophets) => {
     prophets.forEach((prophet) => {
-        let card = document.createElement('div');
+        let card = document.createElement('section');
         let fullName = document.createElement('h2');
         let portrait = document.createElement('img');
 
@@ -33,5 +35,5 @@ const displayProphets = (prophets) => {
     })
 }
 
-getProphetDate();
+
 displayProphets();
