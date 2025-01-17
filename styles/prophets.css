@@ -20,3 +20,8 @@ section {
     gap: 2em;
 
 }
+
+button {
+    padding: 2em;
+    margin: 0 1em 1em 1em;
+}
