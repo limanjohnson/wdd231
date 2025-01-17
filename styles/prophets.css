@@ -1,3 +1,11 @@
+body {
+    background-color: #eee;
+}
+
+header {
+    text-align: center;
+}
+
 #cards {
     display: flex;
     flex-wrap: wrap;
