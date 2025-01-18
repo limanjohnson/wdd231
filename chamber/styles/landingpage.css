@@ -2,6 +2,10 @@ header {
     border: 5px solid red;
 }
 
+main {
+    max-width:1200px;
+}
+
 .ln-hero-container {
     border: 5px solid black;
     margin-bottom: 1em;
