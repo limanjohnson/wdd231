@@ -26,17 +26,24 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/landingpage.css">
 
+    <!--  Font Awesome Icons  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <title>Chamber of Commerce</title>
 </head>
 <body>
 <header>
-    <img><h1>Saratoga Springs</h1>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Directory</a>
-        <a href="#">Join</a>
-        <a href="#">Discover</a>
-    </nav>
+    <div>
+        <img><h1>Saratoga Springs</h1>
+    </div>
+    <div class="nav-menu">
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Directory</a>
+            <a href="#">Join</a>
+            <a href="#">Discover</a>
+        </nav>
+    </div>
 </header>
 <main>
     <div class="ln-hero-container">
@@ -48,13 +55,23 @@
     </div>
     <div class="ln-directory-container">
         <div class="ln-events-container ln-directory-child">
-            <h3>Events</h3>
+            <div class="ln-container-heading">
+                <h3>Events</h3>
+            </div>
+            <div>
+                <p>This is a test</p>
+            </div>
         </div>
         <div class="ln-weather-container ln-directory-child">
-            <h3>Current Weather</h3>
+            <div class="ln-container-heading">
+                <h3>Current Weather</h3>
+            </div>
+
         </div>
         <div class="ln-forecast-container ln-directory-child">
-            <h3>Weather Forecast</h3>
+            <div class="ln-container-heading">
+                <h3>Weather Forecast</h3>
+            </div>
         </div>
     </div>
     <div>
@@ -80,13 +97,19 @@
             <p>This is a column</p>
         </div>
         <div class="ln-footer-child">
-            <p>This is a column</p>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
         </div>
         <div class="ln-footer-child">
-            <p>This is a column</p>
+            <p>WDD 231 Chamber of Commerce Project</p>
+            <p>Liam Nell</p>
+            <p>&copy 2025 Saratoga Springs Chamber of Commerce</p>
+            <p>Last Modified: <span id="lastModified"></span></p>
         </div>
     </div>
 </footer>
 </body>
+
+<script src="scripts/last-modified.js" defer></script>
 
 </html>

@@ -1,6 +1,52 @@
-header {
-    border: 5px solid red;
+:root {
+    --main-color: #6d6875;
+    --secondary-color: #b5838d;
+    --tertiary-color: #e5989b;
+    --quaternary-color: #ffb4a2;
+    --quinary-color: #ffcdb2;
+    --light-color: #fff2e9;
 }
+
+body {
+    background-color: var(--light-color);
+}
+
+/****** Header ******/
+
+.nav-menu nav {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-menu nav a {
+    padding: 0 1em 0 1em;
+    height:3em;
+    display:flex;
+    align-items: center;
+
+    text-decoration:none;
+    color: var(--main-color);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--quinary-color);
+    color: var(--main-color);
+}
+
+header div {
+    display: flex;
+}
+
+header div h1 {
+    margin-left: 1em;
+}
+
+/****** Main ******/
 
 main {
     max-width:1200px;
@@ -8,7 +54,7 @@ main {
 }
 
 .ln-hero-container {
-    border: 5px solid black;
+    /*border: 5px solid black;*/
     margin-bottom: 1em;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -36,32 +82,41 @@ button {
 
 .ln-directory-container {
     border: 5px solid orange;
-    display:flex;
+    display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     gap: 1em;
+    flex-wrap: wrap;
 }
 
 .ln-directory-child {
     height:10em;
     width: 10em;
-    border: 5px solid yellow;
 }
 
 .ln-events-container {
-    border: 5px solid green;
+    background-color: var(--quinary-color);
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1em;
     flex-grow:2;
 }
 
-.ln-weather-container {
-    border: 5px solid blue;
+.ln-container-heading {
+    background-color: var(--secondary-color);
+    width:100%;
+    height:4em;
+    text-align:center;
+}
+
+.ln-weather-container, .ln-forecast-container {
+    background-color: var(--quinary-color);
+    display:flex;
+    justify-content: space-evenly;
     flex-grow:1;
 }
 
-.ln-forecast-container {
-    border: 5px solid purple;
-    flex-grow:1;
-}
 
 /****** Business Cards ******/
 
@@ -69,29 +124,38 @@ button {
 
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    gap: 1em;
-    margin: 3em auto;
+    justify-content: space-between;
+    gap: .5em;
+    margin: 2em .5em;
+    flex-wrap:wrap;
+
 }
 
 .ln-business-child {
-    border: 5px solid pink;
+    background-color: var(--main-color);
+    color: var(--light-color);
+    border: 5px solid var(--secondary-color);
     border-radius: 1em;
     padding: 1em;
-    height:5em;
-    width: 15em;
+    height:7em;
+    width: 9em;
+    flex-grow:1;
 }
 
 /****** Footer ******/
 .ln-footer-container {
-    border: 5px solid grey;
-    height:10em;
-
+    background-color: var(--quinary-color);
     display:grid;
     grid-template-columns: repeat(3, 1fr);
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 
 .ln-footer-child {
-    border: 5px solid grey;
-    text-align:center;
+    display:flex;
+    flex-direction: column;
  }
+
+.ln-footer-child p {
+    margin: .3em;
+}
