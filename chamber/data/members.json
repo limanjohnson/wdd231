@@ -9,11 +9,11 @@
     "membershipLevel": "3"
   },
     {
-      "businessName": "Zions Bank",
-      "address": "1533 N Redwood Road\nSaratoga Springs",
-      "phoneNumber":"(801) 766-9480",
-      "websiteURL": "images/zions-bank.svg",
-      "images": "https://w7.pngwing.com/pngs/254/872/png-transparent-zions-bank-hd-logo-thumbnail.png",
+      "businessName": "The Home Depot",
+      "address": "1226 N Exchange Dr\nSaratoga Springs",
+      "phoneNumber":"+13859936100",
+      "websiteURL": "https://www.homedepot.com/l/Saratoga-Springs/UT/Saratoga-Springs/84045/4461",
+      "images": "images/thehomedepot.png",
       "membershipLevel": "3"
     },
     {
@@ -21,7 +21,7 @@
       "address": "1083 N Redwood Rd\nSaratoga Springs",
       "phoneNumber":"(801) 407-4194",
       "websiteURL": "https://www.costco.com/warehouse-locations/saratoga-springs-UT-1383.html?utm_term=KW&utm_campaign=Homepage&utm_medium=GMB&utm_source=Google&utm_content=Link",
-      "images": "https://banner2.cleanpng.com/20180624/joc/kisspng-costco-nasdaq-cost-warehouse-club-retail-business-costco-wholesale-canada-ltd-5b2fab989eef13.302589131529850776651.jpg",
+      "images": "images/costco-logo.png",
       "membershipLevel": "2"
     },
     {
@@ -29,7 +29,7 @@
       "address": "136 W State St #73\nSaratoga Springs",
       "phoneNumber":"(801) 766-4272",
       "websiteURL": "https://www.walmart.com/store/4438-saratoga-springs-ut/",
-      "images": "https://banner2.cleanpng.com/20180626/fys/aay57xy0f.webp",
+      "images": "images/walmart_logo.png",
       "membershipLevel": "2"
     },
     {
