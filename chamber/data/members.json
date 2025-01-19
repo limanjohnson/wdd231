@@ -1,17 +1,18 @@
 {
-  "businessInformation": [{
+  "businessInformation": [
+    {
     "businessName": "O'Reilly Auto Parts",
     "address": "1428 N Redwood Road\nSaratoga Springs, UT",
     "phoneNumber":"+18017688263",
     "websiteURL": "https://locations.oreillyauto.com/ut/saratogasprings/autoparts-3678.html",
-    "images": "https://arc1932.com/wp-content/uploads/2022/11/png-clipart-car-logo-o-reilly-auto-parts-closed-autozone-car-thumbnail.png",
+    "images": "images/oreillylogo.png",
     "membershipLevel": "3"
   },
     {
       "businessName": "Zions Bank",
       "address": "1533 N Redwood Road\nSaratoga Springs",
       "phoneNumber":"(801) 766-9480",
-      "websiteURL": "https://www.zionsbank.com/",
+      "websiteURL": "images/zions-bank.svg",
       "images": "https://w7.pngwing.com/pngs/254/872/png-transparent-zions-bank-hd-logo-thumbnail.png",
       "membershipLevel": "3"
     },
