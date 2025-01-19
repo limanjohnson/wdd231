@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         businessInformation.forEach((business) => {
             let businessCard = document.createElement('section');
             let businessLogo = document.createElement('img');
-            let businessName = document.createElement('h2');
+            let businessName = document.createElement('h3');
             let businessAddress = document.createElement('p');
             let businessNumber = document.createElement('p');
             let businessURL = document.createElement('a');
@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
             businessName.innerText = `${business.businessName}`;
             businessAddress.innerText = `${business.address}`;
             businessNumber.innerText = `${business.phoneNumber}`;
+            businessNumber.setAttribute('class', 'phone-number');
 
             businessURL.setAttribute('href', business.websiteURL)
             businessURL.setAttribute('target', '_blank')

@@ -65,6 +65,17 @@ header {
         transition-delay: 0s; /* Align with visibility */
     }
 
+    .list-view section {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap:5px;
+    }
+
+    .list-view section .phone-number {
+        display:none;
+    }
+
+
+
 }
 
 
@@ -274,7 +285,7 @@ button#grid, button#list {
 }
 
 .list-view section a:hover, .grid-view section a:hover {
-    color: var(--secondary-color);
+    text-decoration:underline;
 }
 
 /****** Footer ******/
