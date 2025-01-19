@@ -1,0 +1,58 @@
+{
+  "businessInformation": [{
+    "businessName": "O'Reilly Auto Parts",
+    "address": "1428 N Redwood Road\nSaratoga Springs, UT",
+    "phoneNumber":"+18017688263",
+    "websiteURL": "https://locations.oreillyauto.com/ut/saratogasprings/autoparts-3678.html",
+    "images": "https://arc1932.com/wp-content/uploads/2022/11/png-clipart-car-logo-o-reilly-auto-parts-closed-autozone-car-thumbnail.png",
+    "membershipLevel": "3"
+  },
+    {
+      "businessName": "Zions Bank",
+      "address": "1533 N Redwood Road\nSaratoga Springs",
+      "phoneNumber":"(801) 766-9480",
+      "websiteURL": "https://www.zionsbank.com/",
+      "images": "https://w7.pngwing.com/pngs/254/872/png-transparent-zions-bank-hd-logo-thumbnail.png",
+      "membershipLevel": "3"
+    },
+    {
+      "businessName": "Costco Wholesale",
+      "address": "1083 N Redwood Rd\nSaratoga Springs",
+      "phoneNumber":"(801) 407-4194",
+      "websiteURL": "https://www.costco.com/warehouse-locations/saratoga-springs-UT-1383.html?utm_term=KW&utm_campaign=Homepage&utm_medium=GMB&utm_source=Google&utm_content=Link",
+      "images": "https://banner2.cleanpng.com/20180624/joc/kisspng-costco-nasdaq-cost-warehouse-club-retail-business-costco-wholesale-canada-ltd-5b2fab989eef13.302589131529850776651.jpg",
+      "membershipLevel": "2"
+    },
+    {
+      "businessName": "Walmart Supercenter",
+      "address": "136 W State St #73\nSaratoga Springs",
+      "phoneNumber":"(801) 766-4272",
+      "websiteURL": "https://www.walmart.com/store/4438-saratoga-springs-ut/",
+      "images": "https://banner2.cleanpng.com/20180626/fys/aay57xy0f.webp",
+      "membershipLevel": "2"
+    },
+    {
+      "businessName": "Smith's Marketplace",
+      "address": "689 N Redwood Rd\nSaratoga Springs",
+      "phoneNumber":"(385) 374-5470",
+      "websiteURL": "https://www.smithsfoodanddrug.com/stores/grocery/ut/saratoga-springs/saratoga-springs-marketplace/706/00207?cid=loc_70600207_gmb",
+      "images": "https://seeklogo.com/images/S/Smith_s_Food__and__Drug_Stores-logo-67F169CF79-seeklogo.com.png",
+      "membershipLevel": "1"
+    },
+    {
+      "businessName": "Supercuts",
+      "address": "Supercuts Saratoga Springs, 717 N Redwood Rd Ste 110\nSaratoga Springs",
+      "phoneNumber":"(801) 701-2642",
+      "websiteURL": "https://www.supercuts.com/locations/nearme/haircut/ut/saratoga-springs/717-n-redwood-rd-ste-110/81647",
+      "images": "https://www.supercuts.com/static/media/logo.2e9b583650bc6db6b39734728d34c1ad.svg",
+      "membershipLevel": "1"
+    },
+    {
+      "businessName": "Fat Cats",
+      "address": "212 Pioneer Crossing\n Saratoga Springs",
+      "phoneNumber":"(385) 262-7005",
+      "websiteURL": "https://www.fatcatsfun.com/locations/saratoga-springs/",
+      "images": "https://www.fatcatsfun.com/media/ijqd1ozw/fcmonogramroundwhite.png",
+      "membershipLevel": "1"
+    }]
+}
