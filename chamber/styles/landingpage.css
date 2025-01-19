@@ -5,13 +5,68 @@
     --quaternary-color: #ffb4a2;
     --quinary-color: #ffcdb2;
     --light-color: #fff2e9;
+
+
+
 }
 
 body {
     background-color: var(--light-color);
+    font-family: "Poppins", sans-serif;
 }
 
+
 /****** Header ******/
+
+header {
+    position:sticky;
+    top:0;
+    z-index:1000;
+    border-bottom: 5px solid var(--secondary-color);
+}
+
+.hamburger-menu {
+    display: none;
+    background-color: var(--quinary-color);
+    color: var(--main-color);
+    border: none;
+    font-size: 2em;
+    padding: 0.5em;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: block;
+    }
+
+
+    .nav-menu {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: var(--quinary-color, #ffffff); /* Added fallback */
+        width: 100%;
+        z-index: 1000;
+        transform: translateY(-10px); /* Smooth entry effect */
+        transition: opacity 0.5s, transform 0.5s, visibility 0s 1s; /* Delaying visibility toggle for smooth transition */
+        padding: 1em 0;
+    }
+
+    .nav-menu.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        display: flex; /* Flex settings now only applied here */
+        flex-direction: column;
+        gap: 1em;
+        transition-delay: 0s; /* Align with visibility */
+    }
+
+}
+
 
 .nav-menu nav {
     display: flex;
@@ -74,23 +129,29 @@ img.ln-hero-image {
 button {
     grid-column: 4 / 5;
     grid-row: 3 / 4;
-    background-color: rgba(255, 0, 0, 0.9);
-    margin:.5em;
+    background-color: var(--light-color);
+    color: var(--main-color);
+}
+
+.ln-hero-container button:hover {
+    background-color: var(--main-color);
+    color: var(--light-color);
+    transition-duration: 0.5s;
 }
 
 /****** Directory Section ******/
 
 .ln-directory-container {
-    border: 5px solid orange;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     gap: 1em;
     flex-wrap: wrap;
+    margin:1em;
 }
 
 .ln-directory-child {
-    height:10em;
+    height:15em;
     width: 10em;
 }
 
@@ -147,7 +208,21 @@ section {
     color: var(--light-color);;
 }
 
-#businessCard {
+.button-menu {
+    text-align: center;
+}
+
+.button-menu button:hover {
+    background-color: var(--main-color);
+    color: var(--light-color);
+    transition-duration: 0.5s;
+}
+
+button#grid, button#list {
+    padding: 1em 3em;
+}
+
+.grid-view {
     display:grid;
     justify-items:center;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -155,7 +230,7 @@ section {
     margin:1em;
 }
 
-#businessCard section {
+.grid-view section {
     display: flex;
     flex-direction:column;
     align-items:center;
@@ -166,9 +241,40 @@ section {
     padding-top:1em;
 }
 
-#businessCard section img {
+.grid-view section img {
     height: fit-content;
     width: 20%;
+}
+
+.list-view {
+    display:flex;
+    flex-direction:column;
+    margin:1em;
+}
+
+.list-view section {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin:0;
+    padding:.25em;
+    align-items:center;
+}
+
+.list-view section:nth-child(even) {
+    background-color: var(--secondary-color);
+}
+
+.list-view section img {
+    display:none;
+}
+
+.list-view section a, .grid-view section a {
+    text-decoration:none;
+    color: var(--light-color);
+}
+
+.list-view section a:hover, .grid-view section a:hover {
+    color: var(--secondary-color);
 }
 
 /****** Footer ******/
@@ -213,6 +319,8 @@ footer {
     width: 50px;
     text-align: center;
     text-decoration: none;
+    margin:.25em;
+    border-radius: 10%;
 }
 
 .fa:hover {

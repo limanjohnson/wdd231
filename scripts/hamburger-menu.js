@@ -19,7 +19,7 @@ navItem.forEach(link => {
     });
 });
 
-// check screen size and togle hamburger menu
+// check screen size and toggle hamburger menu
 function handleResize() {
     if (window.innerWidth >= 651) {
         navigation.classList.add('open');

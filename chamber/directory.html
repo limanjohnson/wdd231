@@ -29,13 +29,20 @@
     <!--  Font Awesome Icons  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <!--  Google Fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
     <title>Chamber of Commerce</title>
 </head>
 <body>
 <header>
     <div>
-        <img><h1>Saratoga Springs</h1>
+        <h1>Saratoga Springs</h1>
     </div>
+    <button id="ham-menu" class="hamburger-menu">
+    </button>
     <div class="nav-menu">
         <nav>
             <a href="#">Home</a>
@@ -48,7 +55,7 @@
 <main>
     <div class="ln-hero-container">
         <img class="ln-hero-image" src="images/saratoga-springs-hero.jpeg" alt="Saratoga Springs">
-        <button>Keynote tickets</button>
+<!--        <button>Keynote tickets</button>-->
     </div>
     <div class="home-container">
         <h2>Home</h2>
@@ -93,7 +100,7 @@
             <button id="grid">⏹️Grid</button>
             <button id="list">📄List</button>
         </div>
-        <div id="businessCard">
+        <div id="businessCard" class="grid-view">
 
         </div>
     </div>
@@ -122,5 +129,6 @@
 
 <script src="scripts/last-modified.js" defer></script>
 <script src="scripts/businessjson.js" defer></script>
+<script src="scripts/hamburger-menu.js" defer></script>
 
 </html>

@@ -19,14 +19,27 @@ document.addEventListener('DOMContentLoaded', () => {
             let businessCard = document.createElement('section');
             let businessLogo = document.createElement('img');
             let businessName = document.createElement('h2');
+            let businessAddress = document.createElement('p');
+            let businessNumber = document.createElement('p');
+            let businessURL = document.createElement('a');
 
 
-            businessName.innerText = `${business.businessName}`
+            businessName.innerText = `${business.businessName}`;
+            businessAddress.innerText = `${business.address}`;
+            businessNumber.innerText = `${business.phoneNumber}`;
 
-            businessLogo.setAttribute('src', `${business.images}`)
+            businessURL.setAttribute('href', business.websiteURL)
+            businessURL.setAttribute('target', '_blank')
+            businessURL.innerText = `Visit Website`
+
+            businessLogo.setAttribute('src', `${business.images}`);
+            businessLogo.setAttribute('alt', business.businessName);
 
             businessCard.appendChild(businessLogo);
             businessCard.appendChild(businessName);
+            businessCard.appendChild(businessAddress);
+            businessCard.appendChild(businessNumber);
+            businessCard.appendChild(businessURL)
             cards.appendChild(businessCard);
 
         })
@@ -34,6 +47,31 @@ document.addEventListener('DOMContentLoaded', () => {
         // businessInformation.forEach((business) => {
         //     let businessList = document.createElement('section')
         // })
+    };
+
+    // Display list vs grid
+    const setToggle = () => {
+        const businessCardContainer = document.querySelector('#businessCard');
+        const gridButton = document.querySelector("#grid");
+        const listButton = document.querySelector("#list");
+
+        if (!gridButton || !listButton) {
+            console.error('Grid or List button not found');
+            return;
+        }
+
+        console.log('Grid and List buttons found');
+
+        gridButton.addEventListener('click', () => {
+            businessCardContainer.classList.remove('list-view');
+            businessCardContainer.classList.add('grid-view');
+        });
+
+        listButton.addEventListener('click', () => {
+            businessCardContainer.classList.remove('grid-view');
+            businessCardContainer.classList.add('list-view');
+        })
+
     }
 
 
@@ -41,14 +79,13 @@ document.addEventListener('DOMContentLoaded', () => {
     getBusinessData().then((businessData) => {
         if (businessData && businessData.businessInformation) {
         displayBusiness(businessData.businessInformation);
+        setToggle();
         } else {
             console.error('no valid data found', businessData)
         }
     });
 
-    // Display list vs grid
-    const gridbutton = document.querySelector("#grid");
-    const listbutton = document.querySelector("#list");
+
 
 });
 
