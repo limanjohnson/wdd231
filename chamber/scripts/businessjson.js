@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             businessLogo.setAttribute('src', `${business.images}`);
             businessLogo.setAttribute('alt', business.businessName);
+            businessLogo.setAttribute('loading', 'lazy');
 
             businessCard.appendChild(businessLogo);
             businessCard.appendChild(businessName);

@@ -37,15 +37,15 @@
       "address": "689 N Redwood Rd\nSaratoga Springs",
       "phoneNumber":"(385) 374-5470",
       "websiteURL": "https://www.smithsfoodanddrug.com/stores/grocery/ut/saratoga-springs/saratoga-springs-marketplace/706/00207?cid=loc_70600207_gmb",
-      "images": "https://seeklogo.com/images/S/Smith_s_Food__and__Drug_Stores-logo-67F169CF79-seeklogo.com.png",
+      "images": "images/smithslogo.png",
       "membershipLevel": "1"
     },
     {
       "businessName": "Supercuts",
-      "address": "Supercuts Saratoga Springs, 717 N Redwood Rd Ste 110\nSaratoga Springs",
+      "address": "Supercuts, 717 N Redwood Rd Ste 110\nSaratoga Springs",
       "phoneNumber":"(801) 701-2642",
       "websiteURL": "https://www.supercuts.com/locations/nearme/haircut/ut/saratoga-springs/717-n-redwood-rd-ste-110/81647",
-      "images": "https://www.supercuts.com/static/media/logo.2e9b583650bc6db6b39734728d34c1ad.svg",
+      "images": "images/supercutslogo.svg",
       "membershipLevel": "1"
     },
     {
@@ -53,7 +53,7 @@
       "address": "212 Pioneer Crossing\n Saratoga Springs",
       "phoneNumber":"(385) 262-7005",
       "websiteURL": "https://www.fatcatsfun.com/locations/saratoga-springs/",
-      "images": "https://www.fatcatsfun.com/media/ijqd1ozw/fcmonogramroundwhite.png",
+      "images": "images/fatcats.png",
       "membershipLevel": "1"
     }]
 }

@@ -93,7 +93,8 @@ header {
     align-items: center;
 
     text-decoration:none;
-    color: var(--main-color);
+    color: black;
+    font-weight:600;
 }
 
 header {
@@ -101,7 +102,7 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: var(--quinary-color);
-    color: var(--main-color);
+    color: black;
 }
 
 header div {
@@ -253,8 +254,10 @@ button#grid, button#list {
 }
 
 .grid-view section img {
-    height: fit-content;
-    width: 20%;
+    object-fit:cover;
+    width:100px;
+    height:auto;
+    /*width: 20%;*/
 }
 
 .list-view {
