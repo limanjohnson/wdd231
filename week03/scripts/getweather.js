@@ -22,8 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     apiFetch();
 
-    const displayWeather = (data) => {
-        currentTemp.innerHTML = `${data.temp}`;
+    function displayWeather(data) {
+        currentTemp.innerHTML = data.temp;
     }
 
     displayWeather();
