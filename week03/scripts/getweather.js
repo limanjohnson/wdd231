@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (response.ok) {
                 const data = await response.json();
                 console.table(data);
+                return data;
             } else {
                 throw Error(await response.text());
             }
@@ -20,4 +21,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     apiFetch();
+
+    const displayWeather = (data) => {
+        data.forEach(weatherItem => {
+             let temp = currentTemp;
+             let icon = weatherIcon;
+             let caption = figCaption;
+
+             temp.innerText = `${weatherItem.temp}`;
+
+        })
+    }
 });
