@@ -54,6 +54,8 @@
         }
     }
 
+    apiFetchForecastWeather();
+
     function getForecastWeatherData(futureData) {
 
     }
