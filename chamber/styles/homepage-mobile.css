@@ -1,0 +1,10 @@
+@media screen and (max-width: 768px) {
+
+    .weather-information {
+        padding: .25em;
+    }
+
+    .statistics p {
+        font-size: .75em;
+    }
+}
