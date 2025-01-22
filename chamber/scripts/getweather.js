@@ -5,6 +5,7 @@
     const expectedHigh = document.getElementById("expected-high");
     const expectedLow = document.getElementById("expected-low");
     const humidity = document.getElementById("humidity");
+    const weatherIcon = document.getElementById("weather-icon");
     const url = "https://api.openweathermap.org/data/2.5/weather?lat=40.33&lon=-111.9&units=imperial&appid=d6fa42231de7c3445d5e27a80120b9e4";
 
     async function apiFetch () {
@@ -28,6 +29,9 @@
         expectedHigh.innerHTML = data.main.temp_max;
         expectedLow.innerHTML = data.main.temp_min;
         humidity.innerHTML = data.main.humidity;
+        const iconsrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`
+        weatherIcon.setAttribute('src', iconsrc)
+        weatherIcon.setAttribute('alt', currentDescription.innerHTML)
     }
 
     export default function displayWeather() {
