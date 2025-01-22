@@ -7,4 +7,25 @@
     .statistics p {
         font-size: .75em;
     }
+
+    /*  Footer  */
+
+    .ln-footer-container p {
+        font-size:.75em;
+    }
+
+    .ln-footer-child-1 h4 {
+        font-size: .8em;
+    }
+
+    .ln-footer-child-1 a {
+        font-size: .7em;
+    }
+
+    .fa {
+        width:15%;
+    }
+
+
+
 }
