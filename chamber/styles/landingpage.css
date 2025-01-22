@@ -196,6 +196,11 @@ button {
     justify-content: start;
 }
 
+.weather-information {
+    display: flex;
+    flex-direction: column;
+}
+
 
 /****** Business Cards ******/
 
