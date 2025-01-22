@@ -23,8 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
     apiFetch();
 
     function displayWeather(data) {
-        currentTemp.innerHTML = data.temp;
+        currentTemp.innerHTML = data.main.temp;
     }
 
-    displayWeather();
+    displayWeather(data);
 });
