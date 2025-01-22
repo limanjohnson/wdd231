@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 throw Error(await response.text());
             }
         } catch (error) {
-                console.log(error);
+                console.table(error);
         }
     }
 
