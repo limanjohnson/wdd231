@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Liam Nell">
+  <meta name="description" content="
+    Chamber Directory
+    Liam Nell
+    This page is displays a directory for the chamber of commerce">
+
+  <!-- Facebook Open Graph Meta Properties -->
+  <meta property="og:title" content="Chamber of Commerce | Liam Nell">
+  <meta property="og:description" content="WDD 231 - Web Frontend Development">
+  <meta property="og:image" content="https://limanjohnson.github.io/wdd231/chamber/images/saratoga-springs-hero.webp">
+  <meta property="og:url" content="https://limanjohnson.github.io/wdd231/chamber">
+  <meta property="og:type" content="website">
+
+  <!--  X Meta Properties  -->
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!--  Favicon  -->
+
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <!--  CSS Links  -->
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/landingpage.css">
+
+  <!--  Font Awesome Icons  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!--  Google Fonts  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <title>Chamber of Commerce | Liam Nell</title>
+</head>
+<body>
+<header>
+  <div>
+    <h1>Saratoga Springs</h1>
+  </div>
+  <button id="ham-menu" class="hamburger-menu">
+  </button>
+  <div class="nav-menu">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="directory.html">Directory</a>
+      <a href="#">Join</a>
+      <a href="#">Discover</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="ln-hero-container">
+    <img class="ln-hero-image" src="images/saratoga-springs-hero.webp" alt="Saratoga Springs">
+    <!--        <button>Keynote tickets</button>-->
+  </div>
+  <div class="home-container">
+    <h2>Home</h2>
+  </div>
+  <div class="ln-directory-container">
+    <div class="ln-events-container ln-directory-child">
+      <div class="ln-container-heading">
+        <h3>Events</h3>
+      </div>
+      <div>
+
+      </div>
+    </div>
+    <div class="ln-weather-container ln-directory-child">
+      <div class="ln-container-heading">
+        <h3>Current Weather</h3>
+      </div>
+      <div>
+        <img src="" alt="Current Weather">
+      </div>
+      <div>
+        <span id="current-temp"></span>
+        <span id="current-description"></span>
+        <span id="expected-high"></span>
+        <span id="expected-low"></span>
+        <span id="humidity"></span>
+      </div>
+
+    </div>
+    <div class="ln-forecast-container ln-directory-child">
+      <div class="ln-container-heading">
+        <h3>Weather Forecast</h3>
+      </div>
+      <span id="current-temp"></span>
+    </div>
+  </div>
+</main>
+<footer>
+  <div class="ln-footer-container">
+    <div class="ln-footer-child ln-footer-child-1">
+      <h4>Saratoga Springs Chamber of Commerce</h4>
+      <p>225 E State St, Lehi, UT 84043</p>
+      <a href="tel:8019016664">(801) 901-6664</a>
+    </div>
+    <div class="ln-footer-child ln-footer-child-2">
+      <a href="#" class="fa fa-facebook"></a>
+      <a href="#" class="fa fa-twitter"></a>
+      <a href="#" class="fa fa-youtube"></a>
+    </div>
+    <div class="ln-footer-child ln-footer-child-3">
+      <p>WDD 231 Chamber of Commerce Project</p>
+      <p>Liam Nell</p>
+      <p>&copy; 2025 Saratoga Springs Chamber of Commerce</p>
+      <p>Last Modified: <span id="lastModified"></span></p>
+    </div>
+  </div>
+</footer>
+
+<script src="scripts/last-modified.js" defer></script>
+<script src="scripts/businessjson.js" defer></script>
+<script src="scripts/hamburger-menu.js" defer></script>
+
+</body>
+
+
+
+</html>
