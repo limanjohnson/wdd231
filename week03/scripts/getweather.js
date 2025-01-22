@@ -22,8 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function displayWeather(data) {
         currentTemp.innerHTML = data.main.temp;
-        const iconSrc = 'https://openweathermap.org/img/w/${data.weather[0].icon}.png'
-        let weatherDescription = data.weather[0].description;
+        const iconSrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`
+        let weatherDescription = data.weather[0].description.icon;
         weatherIcon.setAttribute('src', iconSrc);
         weatherIcon.setAttribute('alt', weatherDescription);
 
