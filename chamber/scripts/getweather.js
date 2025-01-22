@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 throw new Error(await response.text());
             }
         } catch (error) {
-            console.log(error);
+            console.log(`There has been an error with fetch the api ${error}`);
         }
     }
 
