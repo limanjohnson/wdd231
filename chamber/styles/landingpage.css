@@ -198,15 +198,20 @@ button {
 
 .weather-information {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+}
+
+.weather-image img {
+    width: 100px;
 }
 
 .statistics {
-    display:flex;
-    flex-direction:column;
+    display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: start;
     gap: 1em;
+    margin-top:1em;
 }
 
 
