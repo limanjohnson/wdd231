@@ -190,6 +190,12 @@ button {
     flex-grow:1;
 }
 
+.ln-weather-container.ln-directory-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
 
 /****** Business Cards ******/
 
