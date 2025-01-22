@@ -10,12 +10,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const response = await fetch(url);
             if (response.ok) {
                 const data = await response.json();
-                console.log(data);
+                console.table(data);
             } else {
                 throw Error(await response.text());
             }
         } catch (error) {
-                console.table(error);
+                console.log(error);
         }
     }
 
