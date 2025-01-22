@@ -159,7 +159,7 @@ button {
     justify-content: space-evenly;
     gap: 1em;
     flex-wrap: wrap;
-    margin:1em;
+    margin-bottom:2em;
 }
 
 .ln-directory-child {
