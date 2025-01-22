@@ -23,13 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
     apiFetch();
 
     const displayWeather = (data) => {
-        data.forEach(weatherItem => {
-             let temp = currentTemp;
-             let icon = weatherIcon;
-             let caption = figCaption;
-
-             temp.innerText = `${weatherItem.temp}`;
-
-        })
+        currentTemp.innerHTML = `${data.temp}`;
     }
+
+    displayWeather();
 });
