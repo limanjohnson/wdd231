@@ -1,0 +1,21 @@
+{
+  "familyName": "Johnson",
+  "moveInDate": "12-26-2024",
+  "numberPeopleInFamily": 3,
+  "bishopricVisited": true,
+  "indFamilyNames": [{
+    "name": "Bob",
+    "gender": "male",
+    "birthdate": "10-01-1991"
+  },
+    {
+      "name": "Jenny",
+      "gender": "female",
+      "birthdate": "09-20-1993"
+    },
+    {
+      "name": "Bill",
+      "gender": "female",
+      "birthdate": "03-09-2017"
+    }]
+}

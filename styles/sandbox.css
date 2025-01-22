@@ -1,0 +1,5 @@
+@media only screen and (min-width: 32rem) {
+    span {font-size: 2rem;}
+}
+
+span p {font-size: 1.5rem;}
