@@ -22,9 +22,17 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    apiFetch();
-    // function displayWeather(data) {
-    //
-    // }
+    function getWeatherData(data) {
+        currentTemp.innerHTML = data.main.temp;
+        currentDescription.innerHTML = data.weather[0].description;
+        expectedHigh.innerHTML = data.main.temp_max;
+        expectedLow.innerHTML = data.main.temp_min;
+        humidity.innerHTML = data.main.humidity;
+    }
+
+    export default function displayWeather() {
+        apiFetch().then(data => getWeatherData(data));
+    }
+
 
 });
