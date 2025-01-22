@@ -1,3 +1,3 @@
 import displayWeather from './getweather.js';
 
-displayWeather();
+document.addEventListener('DOMContentLoaded', displayWeather);

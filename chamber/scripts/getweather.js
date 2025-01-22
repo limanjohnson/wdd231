@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+
 
     const currentTemp = document.getElementById("current-temp");
     const currentDescription = document.getElementById("current-description");
@@ -35,4 +35,3 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
 
-});
