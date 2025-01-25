@@ -197,6 +197,7 @@ button {
 .ln-forecast-child {
     display:flex;
     align-items:center;
+    justify-content: space-evenly;
     gap:10px;
     margin:0;
 
