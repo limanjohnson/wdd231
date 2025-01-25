@@ -70,15 +70,18 @@
             currentDay.innerHTML = `
                 <p>${new Date(threeDayForecast[0].dt_txt).toLocaleDateString('en-us', {weekday: "short"})}</p>
                 <p>Temp: ${threeDayForecast[0].main.temp}&nbsp;&deg;F</p>
-                <p>Desc: ${threeDayForecast[0].weather[0].description}</p>`;
+                `;
+            // <p>Desc: ${threeDayForecast[0].weather[0].description}</p>
             oneDayAhead.innerHTML = `
                 <p>${new Date(threeDayForecast[1].dt_txt).toLocaleDateString('en-us', {weekday: "short"})}</p>
                 <p>Temp: ${threeDayForecast[1].main.temp}&nbsp;&deg;F</p>
-                <p>Desc: ${threeDayForecast[1].weather[0].description}</p>`;
+                `;
+            // <p>Desc: ${threeDayForecast[1].weather[0].description}</p>
             twoDaysAhead.innerHTML = `
                 <p>${new Date(threeDayForecast[2].dt_txt).toLocaleDateString('en-us', {weekday: "short"})}</p>
                 <p>Temp: ${threeDayForecast[2].main.temp}&nbsp;&deg;F</p>
-                <p>Desc: ${threeDayForecast[2].weather[0].description}</p>`;
+                `;
+            // <p>Desc: ${threeDayForecast[2].weather[0].description}</p>
         }
     }
 
