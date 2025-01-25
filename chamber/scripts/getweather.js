@@ -68,16 +68,19 @@
 
         if (threeDayForecast.length >= 3) {
             currentDay.innerHTML = `
+                <img src="https://openweathermap.org/img/w/${threeDayForecast[0].weather[0].icon}.png" alt="${threeDayForecast[0].weather[0].description}">
                 <p>${new Date(threeDayForecast[0].dt_txt).toLocaleDateString('en-us', {weekday: "short"})}</p>
                 <p>Temp: ${threeDayForecast[0].main.temp}&nbsp;&deg;F</p>
                 `;
             // <p>Desc: ${threeDayForecast[0].weather[0].description}</p>
             oneDayAhead.innerHTML = `
+                <img src="https://openweathermap.org/img/w/${threeDayForecast[1].weather[1].icon}.png" alt="${threeDayForecast[1].weather[0].description}">
                 <p>${new Date(threeDayForecast[1].dt_txt).toLocaleDateString('en-us', {weekday: "short"})}</p>
                 <p>Temp: ${threeDayForecast[1].main.temp}&nbsp;&deg;F</p>
                 `;
             // <p>Desc: ${threeDayForecast[1].weather[0].description}</p>
             twoDaysAhead.innerHTML = `
+                <img src="https://openweathermap.org/img/w/${threeDayForecast[2].weather[2].icon}.png" alt="${threeDayForecast[2].weather[0].description}">
                 <p>${new Date(threeDayForecast[2].dt_txt).toLocaleDateString('en-us', {weekday: "short"})}</p>
                 <p>Temp: ${threeDayForecast[2].main.temp}&nbsp;&deg;F</p>
                 `;
