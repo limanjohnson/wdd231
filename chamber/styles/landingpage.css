@@ -196,7 +196,10 @@ button {
 
 .ln-forecast-child {
     display:flex;
+    align-items:center;
     gap:10px;
+    margin:0;
+
 }
 
 .ln-forecast-child p {
