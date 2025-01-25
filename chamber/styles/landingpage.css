@@ -190,6 +190,15 @@ button {
     flex-grow:1;
 }
 
+.ln-forecast-container {
+    flex-direction: column;
+}
+
+.ln-forecast-child {
+    display:flex;
+    gap:10px;
+}
+
 .ln-weather-container.ln-directory-child {
     display: flex;
     flex-direction: column;
