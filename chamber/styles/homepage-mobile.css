@@ -4,7 +4,7 @@
         padding: .25em;
     }
 
-    .statistics p {
+    .statistics p, .ln-forecast-child p {
         font-size: .75em;
     }
 
