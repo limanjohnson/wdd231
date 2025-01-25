@@ -60,11 +60,31 @@
     apiFetchForecastWeather();
 
     function getForecastWeatherData(futureData) {
+        const forecastList = futureData.list;
 
+        const dailyForecast = forecastList.filter (item => item.dt_txt.includes("18:00:00"));
+
+        const threeDayForecast = dailyForecast.slice(0.3);
+
+        if (threeDayForecast.length >= 3) {
+            currentDay.innerHTML = `
+                <p>${new Date(threeDayForecast[0].dt_txt).toLocaleDateString()}</p>
+                <p>Temp: ${threeDayForecast[0].main.temp}&nbsp;&deg;F</p>
+                <p>Desc: ${threeDayForecast[0].weather[0].description}</p>`;
+            oneDayAhead.innerHTML = `
+                <p>${new Date(threeDayForecast[1].dt_txt).toLocaleDateString()}</p>
+                <p>Temp: ${threeDayForecast[1].main.temp}&nbsp;&deg;F</p>
+                <p>Desc: ${threeDayForecast[1].weather[1].description}</p>`;
+            twoDaysAhead.innerHTML = `
+                <p>${new Date(threeDayForecast[2].dt_txt).toLocaleDateString()}</p>
+                <p>Temp: ${threeDayForecast[2].main.temp}&nbsp;&deg;F</p>
+                <p>Desc: ${threeDayForecast[2].weather[2].description}</p>`;
+        }
     }
 
     export default function displayWeather() {
         apiFetchCurrentWeather().then(data => getCurrentWeatherData(data));
-    }
+        apiFetchForecastWeather().then(futureData => getForecastWeatherData(futureData));
+    };
 
 
