@@ -235,6 +235,10 @@ button {
     margin:0;
 }
 
+.ln-description-container {
+    display:none;
+}
+
 
 /****** Business Cards ******/
 

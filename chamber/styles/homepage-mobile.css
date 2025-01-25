@@ -33,3 +33,13 @@
 
 
 }
+
+@media screen and (max-width: 512px) {
+    .ln-forecast-child p {
+        font-size: 1em;
+    }
+
+    .ln-description-container {
+        display:block;
+    }
+}
