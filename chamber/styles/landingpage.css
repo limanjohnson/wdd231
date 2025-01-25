@@ -199,6 +199,7 @@ button {
 .weather-information {
     display: flex;
     flex-direction: row;
+    justify-content:space-around;
 }
 
 .weather-image img {

@@ -6,8 +6,11 @@
     const expectedLow = document.getElementById("expected-low");
     const humidity = document.getElementById("humidity");
     const weatherIcon = document.getElementById("weather-icon");
+    const currentDay = document.getElementById("current-day");
+    const oneDayAhead = document.getElementById("one-day-ahead");
+    const twoDaysAhead = document.getElementById("two-days-ahead");
     const currentWeatherURL = "https://api.openweathermap.org/data/2.5/weather?lat=40.33&lon=-111.9&units=imperial&appid=d6fa42231de7c3445d5e27a80120b9e4";
-    const forecastURL = "api.openweathermap.org/data/2.5/forecast?lat=40.33&lon=-111.9&units=imperial&appid=d6fa42231de7c3445d5e27a80120b9e4"
+    const forecastURL = "https://api.openweathermap.org/data/2.5/forecast?lat=40.33&lon=-111.9&units=imperial&appid=d6fa42231de7c3445d5e27a80120b9e4"
 
 
     // Current Weather Data
