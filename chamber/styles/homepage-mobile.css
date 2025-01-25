@@ -39,7 +39,12 @@
         font-size: 1em;
     }
 
+    .ln-forecast-child {
+        gap:30px;
+    }
+
     .ln-description-container {
         display:block;
     }
+
 }
