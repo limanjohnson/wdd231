@@ -4,22 +4,32 @@ import getDate from './last-modified.js';
 
 setupNavigationMenu();
 
-document.addEventListener('DOMContentLoaded', displayWeather);
-getDate();
+document.addEventListener('DOMContentLoaded', () => {
+    displayWeather();
+    displayRandomBusinesses();
+    getDate();
+});
 
     async function getBusinessData() {
         const source = 'data/members.json';
-        const response = await fetch(source);
-        const businessData = await response.json();
-        console.table(businessData);
-        return businessData;
+        try {
+            const response = await fetch(source);
+            if (!response.ok) throw new Error ( `Error fetching data: ${response.statusText}`);
+                const businessData = await response.json();
+                console.table(businessData);
+                return businessData;
+        } catch (error) {
+            console.error(`Failed to fetch data: ${error.message}`, error);
+            return[];
+        }
+
     }
 
     const selectRandomBusiness = (businessInformation) => {
         const businessCard = document.querySelector('#businessCardAds');
         businessCard.innerHTML = '';
         businessInformation.forEach((business) => {
-            let businessCard = document.createElement('section');
+            let businessCardContainer = document.createElement('section');
             let businessLogo = document.createElement('img');
             let businessName = document.createElement('h3');
             let businessAddress = document.createElement('p');
@@ -39,12 +49,12 @@ getDate();
             businessLogo.setAttribute('alt', business.businessName);
             businessLogo.setAttribute('loading', 'lazy');
 
-            businessCard.appendChild(businessLogo);
-            businessCard.appendChild(businessName);
-            businessCard.appendChild(businessAddress);
-            businessCard.appendChild(businessNumber);
-            businessCard.appendChild(businessURL);
-            cards.appendChild(businessCard);
+            businessCardContainer.appendChild(businessLogo);
+            businessCardContainer.appendChild(businessName);
+            businessCardContainer.appendChild(businessAddress);
+            businessCardContainer.appendChild(businessNumber);
+            businessCardContainer.appendChild(businessURL);
+            businessCard.appendChild(businessCardContainer);
 
         })
 
@@ -61,12 +71,20 @@ const randomizeSelection = (array) => {
 };
 
 async function displayRandomBusinesses () {
-    const business = await getBusinessData();
-    const filteredBusiness = business.filter( business => business.membershipLevel === 2 || business.membershipLevel === 3 );
+    const businesses = await getBusinessData();
+
+    console.log('Business Information:', businesses)
+
+    if (!Array.isArray(businesses)) {
+        console.error('Expected an array of businesses but got: ', businesses);
+        return;
+    }
+
+    const filteredBusiness = businesses.filter( business => business.membershipLevel === "2" || business.membershipLevel === "3" );
 
     let chooseEligibleBusiness = randomizeSelection(filteredBusiness);
-    selectRandomBusiness(chooseEligibleBusiness);
+    let selectedBusiness = chooseEligibleBusiness.slice(0, 3);
+
+    selectRandomBusiness(selectedBusiness);
 
 }
-
-document.addEventListener('DOMContentLoaded', displayRandomBusinesses);
