@@ -120,6 +120,10 @@ main {
     margin: 0 auto;
 }
 
+.ln-hero-image-mobile {
+    display:none;
+}
+
 .ln-hero-container {
     /*border: 5px solid black;*/
     margin-bottom: 1em;
@@ -129,6 +133,7 @@ main {
     max-width: 2000px;
     overflow:hidden;
 }
+
 
 img.ln-hero-image {
     grid-column: 1 / 5;

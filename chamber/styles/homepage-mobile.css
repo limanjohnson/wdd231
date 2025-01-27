@@ -52,4 +52,12 @@
         display:block;
     }
 
+    .ln-hero-image {
+        display:none;
+    }
+
+    .ln-hero-image-mobile {
+        display:grid;
+    }
+
 }
