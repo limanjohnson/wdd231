@@ -36,9 +36,11 @@
         expectedLow.innerHTML = Math.round(data.main.temp_min);
         humidity.innerHTML = data.main.humidity;
         const iconsrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`
-        weatherIcon.setAttribute('src', iconsrc)
-        weatherIcon.setAttribute('alt', currentDescription.innerHTML)
+        weatherIcon.innerHTML = `
+        <img src="${iconsrc}" alt="${currentDescription.innerHTML}">`
     }
+
+
 
     // Forecast Weather Data
     async function apiFetchForecastWeather() {
