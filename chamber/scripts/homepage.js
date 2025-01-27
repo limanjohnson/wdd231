@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!response.ok) throw new Error ( `Error fetching data: ${response.statusText}`);
                 const businessData = await response.json();
                 console.table(businessData);
-                return businessData;
+                return businessData.businessInformation;
         } catch (error) {
             console.error(`Failed to fetch data: ${error.message}`, error);
             return[];
