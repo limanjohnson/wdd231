@@ -64,25 +64,25 @@
 
         const dailyForecast = forecastList.filter (item => item.dt_txt.includes("18:00:00"));
 
-        const threeDayForecast = dailyForecast.slice(0.3);
+        const threeDayForecast = dailyForecast.slice(0, 3);
 
         if (threeDayForecast.length >= 3) {
             currentDay.innerHTML = `
                 <img src="https://openweathermap.org/img/w/${threeDayForecast[0].weather[0].icon}.png" alt="${threeDayForecast[0].weather[0].description}">
                 <p>${new Date(threeDayForecast[0].dt_txt).toLocaleDateString('en-us', {weekday: "short"})}</p>
-                <p>${threeDayForecast[0].main.temp}&nbsp;&deg;F</p>
+                <p>Math.round(${threeDayForecast[0].main.temp})&nbsp;&deg;F</p>
                 <p class="ln-description-container">${threeDayForecast[0].weather[0].description}</p>`;
             // <p>${threeDayForecast[0].weather[0].description}</p>
             oneDayAhead.innerHTML = `
                 <img src="https://openweathermap.org/img/w/${threeDayForecast[1].weather[0].icon}.png" alt="${threeDayForecast[1].weather[0].description}">
                 <p>${new Date(threeDayForecast[1].dt_txt).toLocaleDateString('en-us', {weekday: "short"})}</p>
-                <p>${threeDayForecast[1].main.temp}&nbsp;&deg;F</p>
+                <p>Math.round(${threeDayForecast[1].main.temp})&nbsp;&deg;F</p>
                 <p class="ln-description-container">${threeDayForecast[1].weather[0].description}</p>`;
             // <p>${threeDayForecast[1].weather[0].description}</p>
             twoDaysAhead.innerHTML = `
                 <img src="https://openweathermap.org/img/w/${threeDayForecast[2].weather[0].icon}.png" alt="${threeDayForecast[2].weather[0].description}">
                 <p>${new Date(threeDayForecast[2].dt_txt).toLocaleDateString('en-us', {weekday: "short"})}</p>
-                <p>${threeDayForecast[2].main.temp}&nbsp;&deg;F</p>
+                <p>Math.round(${threeDayForecast[2].main.temp})&nbsp;&deg;F</p>
                 <p class="ln-description-container">${threeDayForecast[2].weather[0].description}</p>`;
             // <p>${threeDayForecast[2].weather[0].description}</p>
         }
