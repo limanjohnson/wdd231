@@ -30,6 +30,11 @@
         width:15%;
     }
 
+    .home-container, .ln-directory-container {
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
 
 
 }
