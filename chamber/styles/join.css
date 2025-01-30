@@ -1,0 +1,92 @@
+.ln-form-container {
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    gap:3em;
+}
+
+.form {
+    height:auto;
+    width: 100%;
+    /*border: 1px solid black;*/
+    order: 1;
+}
+
+.form div form input {
+    height: 24px;
+}
+
+.form div form select {
+    height: 33px;
+}
+
+label {
+    margin-top:1em;
+}
+
+
+
+.form div form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+}
+
+.required:after {
+    content:" *";
+    color: red;
+}
+
+.form div form input[type="submit"] {
+    margin-top: 1em;
+    height: 44px;
+}
+
+/**** Membership Levels ****/
+
+.membership-levels {
+    height: auto;
+    width: 100%;
+    /*border: 1px solid red;*/
+    order: 2;
+    margin-top:2em;
+}
+
+.membership-levels div {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 2em;
+    margin-bottom: 2em;
+    border-radius: 2px 35px 2px 35px;
+}
+
+.membership-levels-box {
+    opacity:0;
+    transform: translateY(25px);
+    animation: slideUp 2s ease-out forwards;
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.membership-levels div button {
+    border:none;
+    border-radius: 0 10px;
+}
+
+#membershipDialog div {
+    border-radius: 0;
+}
+
+#membershipDialog button {
+    height: 44px;
+    width: 100%;
+}

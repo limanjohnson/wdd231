@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Liam Nell">
+  <meta name="description" content="
+    Chamber Directory
+    Liam Nell
+    This page is displays a directory for the chamber of commerce">
+
+  <!-- Facebook Open Graph Meta Properties -->
+  <meta property="og:title" content="Chamber of Commerce | Liam Nell">
+  <meta property="og:description" content="WDD 231 - Web Frontend Development">
+  <meta property="og:image" content="https://limanjohnson.github.io/wdd231/chamber/images/saratoga-springs-hero.webp">
+  <meta property="og:url" content="https://limanjohnson.github.io/wdd231/chamber">
+  <meta property="og:type" content="website">
+
+  <!--  X Meta Properties  -->
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!--  Favicon  -->
+
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <!--  CSS Links  -->
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/site-wide.css">
+  <link rel="stylesheet" href="styles/homepage-mobile.css" media="screen">
+  <link rel="stylesheet" href="styles/join.css">
+  <link rel="stylesheet" href="styles/join-mobile.css">
+
+  <!--  Font Awesome Icons  -->
+  <!-- For Footer -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!--  Google Fonts  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <title>Chamber of Commerce | Join</title>
+</head>
+<body>
+<header>
+  <div>
+    <h1>Saratoga Springs</h1>
+  </div>
+  <button id="ham-menu" class="hamburger-menu">
+  </button>
+  <div class="nav-menu">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="directory.html">Directory</a>
+      <a href="join.html">Join</a>
+      <a href="#">Discover</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="ln-hero-container">
+    <img class="ln-hero-image" src="images/saratoga-springs-hero.webp" alt="Saratoga Springs">
+    <img class="ln-hero-image-mobile" src="images/saratoga-springs-hero-mobile.webp" alt="Saratoga Springs">
+    <!--        <button>Keynote tickets</button>-->
+  </div>
+  <div class="page-heading-container">
+    <h2>Join</h2>
+  </div>
+<div class="ln-form-container">
+  <div class="form">
+    <div>
+      <form method="get" action="thankyou.html">
+        <label for="firstName" class="required">First Name:</label>
+        <input name="firstName" id="firstName" type="text" autocomplete="given-name" required />
+        <label for="lastName" class="required">Last Name:</label>
+        <input name="lastName" id="lastName" type="text" autocomplete="family-name" required />
+        <label for="organizationalTitle">Title</label>
+        <input name="organizaitonalTitle" id="organizationalTitle" type="text" autocomplete="organization-title" />
+        <label for="email" class="email" class="required">Email:</label>
+        <input name="email" id="email" type="email" autocomplete="email" required />
+        <label for="phoneNumber" class="phone" class="required">Phone Number:</label>
+        <input name="phoneNumber" id="phoneNumber" type="tel" autocomplete="tel" required />
+        <label for="organizationName">Business/Organization Name:</label>
+        <input name="organizationName" id="organizationName" type="text" autocomplete="organization" required />
+        <label for="address" class="required">Address:</label>
+        <input name="address" id="address" type="text" autocomplete="address" required />
+        <label for="city" class="required">City:</label>
+        <input name="city" id="city" type="text" autocomplete="address-level2" required />
+        <label for="state" class="required">State:</label>
+        <input name="state" id="state" type="text" autocomplete="address-level1" required />
+        <label for="zip" class="required">Zip:</label>
+        <input name="zip" id="zip" type="text" autocomplete="postal-code" required />
+        <label for="membershipType" class="required">Membership Type:</label>
+        <select id="membershipType" name="membershipType" required>
+          <option value="" disabled selected>Select a membership type</option>
+          <option value="nonprofit">NP Membership</option>
+          <option value="bronze">Bronze</option>
+          <option value="silver">Silver</option>
+          <option value="Gold">Gold</option>
+        </select>
+        <label for="businessDescription">Organization Description</label>
+        <textarea name="businessDescription" id="businessDescription" height="100px" placeholder="Enter a description of you organization here"></textarea>
+        <input type="hidden" id="timeStamp" name="timeStamp" />
+        <input type="submit" value="Join" />
+      </form>
+    </div>
+  </div>
+  <div class="membership-levels">
+    <div class="nonprofit membership-levels-box">
+      <h3>Nonprofit Membership</h3>
+      <button id="openButton1">Learn More</button>
+    </div>
+    <div class="bronze membership-levels-box">
+      <h3>Bronze Membership</h3>
+      <button id="openButton2">Learn More</button>
+    </div>
+    <div class="silver membership-levels-box">
+      <h3>Silver Membership</h3>
+      <button id="openButton3">Learn More</button>
+    </div>
+    <div class="gold membership-levels-box">
+      <h3>Gold Membership</h3>
+      <button id="openButton4">Learn More</button>
+    </div>
+
+    <dialog id="membershipDialog">
+      <div></div>
+      <button id="closeButton">Close</button>
+    </dialog>
+
+  </div>
+
+</div>
+</main>
+
+<footer>
+  <div class="ln-footer-container">
+    <div class="ln-footer-child ln-footer-child-1">
+      <h4>Saratoga Springs Chamber of Commerce</h4>
+      <p>225 E State St, Lehi, UT 84043</p>
+      <a href="tel:8019016664">(801) 901-6664</a>
+    </div>
+    <div class="ln-footer-child ln-footer-child-2">
+      <a href="#" class="fa fa-facebook"></a>
+      <a href="#" class="fa fa-twitter"></a>
+      <a href="#" class="fa fa-youtube"></a>
+    </div>
+    <div class="ln-footer-child ln-footer-child-3">
+      <p>WDD 231 Chamber of Commerce Project</p>
+      <p>Liam Nell</p>
+      <p>&copy; 2025 Saratoga Springs Chamber of Commerce</p>
+      <p>Last Modified: <span id="lastModified"></span></p>
+    </div>
+  </div>
+</footer>
+
+<script src="scripts/join.js" type="module" defer></script>
+
+</body>
+</html>

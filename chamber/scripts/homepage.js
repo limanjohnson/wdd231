@@ -1,6 +1,6 @@
 import setupNavigationMenu from './navigateMenu.js';
-import displayWeather from './getweather.js';
-import getDate from './last-modified.js';
+import displayWeather from './getWeather.js';
+import getDate from './lastModified.js';
 
 setupNavigationMenu();
 

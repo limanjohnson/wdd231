@@ -76,97 +76,38 @@ const courses = [
         ],
         completed: false
     }
-]
+];
 
 // Select container for the courses
 const coursesContainer = document.getElementById('ln-course-list');
 
-// Iterate over courses array and create HTML for each course
-courses.forEach(course => {
-    // Create div for courses
-    const courseDiv = document.createElement('div')
-    courseDiv.classList.add('course');
-
-    // Completed Course Class
-    if (course.completed) {
-        courseDiv.classList.add('course-completed')
-    }
-
-    // Div HTML content
-    courseDiv.innerHTML = `
-        <h3>${course.subject} ${course.number}</h3>
-    `;
-
-    // Append the course div to the container
-    coursesContainer.appendChild(courseDiv);
-})
-
-// Filter Array for WDD
+// Filter Arrays
+const allCourses = courses.filter(course => course.subject === 'WDD' || course.subject === 'CSE');
 const wddCourses = courses.filter(course => course.subject === 'WDD');
-
-// Filter Array for CSE
 const cseCourses = courses.filter(course => course.subject === 'CSE');
 
-// Respond to user button selection
-const allButton = document.getElementById('ln-all-courses')
-const cseButton = document.getElementById('ln-cse-courses')
-const wddButton = document.getElementById('ln-wdd-courses')
+// Function to render course HTML
+function createCourseHTML(course) {
+    const courseDiv = document.createElement('div');
+    courseDiv.classList.add('course', course.completed ? 'course-completed' : '');
+    courseDiv.innerHTML = `<h3>${course.subject} ${course.number}</h3>`;
 
-allButton.addEventListener('click',  () => {
-    coursesContainer.innerHTML = '';
-    courses.forEach(course => {
-        const courseDiv = document.createElement('div')
-        courseDiv.classList.add('course');
-        if (course.completed) {
-            courseDiv.classList.add('course-completed');
-        }
-        courseDiv.innerHTML = `
-            <h3>${course.subject} ${course.number}</h3>
-        `
+    // Add click event to display course details
+    courseDiv.addEventListener('click', () => displayDetails(course));
+    return courseDiv;
+}
 
-        coursesContainer.appendChild(courseDiv);
-
+// Function to render courses in the container
+function renderCourses(coursesArray) {
+    coursesContainer.innerHTML = ''; // Clear existing courses
+    coursesArray.forEach(course => {
+        coursesContainer.appendChild(createCourseHTML(course));
     });
+}
 
-});
-
-cseButton.addEventListener('click', () => {
-    coursesContainer.innerHTML = '';
-    cseCourses.forEach(course => {
-        const courseDiv = document.createElement('div')
-        courseDiv.classList.add('course');
-        if (course.completed) {
-            courseDiv.classList.add('course-completed');
-        }
-        courseDiv.innerHTML = `
-            <h3>${course.subject} ${course.number}</h3>
-        `
-
-        coursesContainer.appendChild(courseDiv);
-    });
-});
-
-wddButton.addEventListener('click', () => {
-    coursesContainer.innerHTML = '';
-    wddCourses.forEach(course => {
-        const courseDiv = document.createElement('div')
-        courseDiv.classList.add('course');
-        if (course.completed) {
-            courseDiv.classList.add('course-completed');
-        }
-        courseDiv.innerHTML = `
-            <h3>${course.subject} ${course.number}</h3>
-        `
-
-        coursesContainer.appendChild(courseDiv);
-    })
-})
-
-
-
+// Function to display course details in a modal
 function displayDetails(course) {
     const courseDetails = document.querySelector('#course-details');
-
     courseDetails.innerHTML = `
         <div>
             <h2>${course.subject} ${course.number}</h2>
@@ -181,47 +122,16 @@ function displayDetails(course) {
 
     courseDetails.showModal();
 
-    const closeModal = document.getElementById('closeButton');
-    closeModal.addEventListener('click', () => {
+    // Close modal functionality
+    document.getElementById('closeButton').addEventListener('click', () => {
         courseDetails.close();
     });
-
 }
 
-// Function to create HTML for a course
-function createCourseHTML(course) {
-    const courseDiv = document.createElement('div');
-    courseDiv.classList.add('course');
+// Event listeners for filter buttons
+document.getElementById('ln-all-courses').addEventListener('click', () => renderCourses(allCourses));
+document.getElementById('ln-cse-courses').addEventListener('click', () => renderCourses(cseCourses));
+document.getElementById('ln-wdd-courses').addEventListener('click', () => renderCourses(wddCourses));
 
-    if (course.completed) {
-        courseDiv.classList.add('course-completed');
-    }
-
-    courseDiv.innerHTML = `
-        <h3>${course.subject} ${course.number}</h3>
-    `;
-
-    // Add click event to show course details
-    courseDiv.addEventListener('click', () => {
-        displayDetails(course);
-    });
-
-    return courseDiv;
-}
-
-// Render courses to the container
-function renderCourses(coursesArray) {
-    coursesContainer.innerHTML = ''; // Clear existing content
-    coursesArray.forEach(course => {
-        const courseDiv = createCourseHTML(course);
-        coursesContainer.appendChild(courseDiv);
-    });
-}
-
-// Display all courses initially
-renderCourses(courses);
-
-// Respond to filter button actions
-allButton.addEventListener('click', () => renderCourses(courses));
-cseButton.addEventListener('click', () => renderCourses(cseCourses));
-wddButton.addEventListener('click', () => renderCourses(wddCourses));
+// Initial Render of All Courses
+renderCourses(allCourses);

@@ -34,7 +34,7 @@
 
     <script src="scripts/lastmodified.js" defer></script>
     <script src="scripts/hamburger-menu.js" defer></script>
-    <script src="scripts/ln-courses-completed.js" defer></script>
+    <script src="scripts/ln-courses-completed.js" defer type="module"></script>
 
 </head>
 <body>
@@ -75,9 +75,12 @@
             <button id="ln-wdd-courses" aria-label="Web Development Courses">WDD Courses</button>
             <button id="ln-cse-courses" aria-label="Computer Science Courses">CSE Courses</button>
         </div>
+
         <div id="ln-course-list">
 
         </div>
+
+        <dialog id="course-details"></dialog>
     </section>
 
 </main>
@@ -87,5 +90,6 @@
     </p>
     <p>Last Modified: <span id="lastModified"></span></p>
 </footer>
+
 </body>
 </html>

@@ -1,5 +1,5 @@
 import setupNavigationMenu from './navigateMenu.js';
-import getDate from './last-modified.js';
+import getDate from './lastModified.js';
 
 setupNavigationMenu()
 
