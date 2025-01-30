@@ -118,6 +118,7 @@ header div h1 {
 main {
     max-width:1200px;
     margin: 0 auto;
+    min-height:90vh;
 }
 
 .ln-hero-image-mobile {

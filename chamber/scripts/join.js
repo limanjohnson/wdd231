@@ -1,8 +1,10 @@
 import getTime from './timeAndDateOfFormSubmission.js'
 import getDate from './lastModified.js';
+import setupNavigationMenu from './navigateMenu.js';
 
 getTime();
 getDate();
+setupNavigationMenu();
 
 const openButton = document.querySelector('#openButton1');
 const dialogBox =document.querySelector('#membershipDialog');
