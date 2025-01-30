@@ -17,7 +17,9 @@
 }
 
 .form div form select {
-    height: 33px;
+    height: 44px;
+    background-color: white;
+    color: black;
 }
 
 label {
@@ -40,6 +42,12 @@ label {
 .form div form input[type="submit"] {
     margin-top: 1em;
     height: 44px;
+    background-color: var(--secondary-color);
+}
+
+.form div form input[type="submit"]:hover {
+    background-color: var(--tertiary-color);
+    transition-duration: 0.5s;
 }
 
 /**** Membership Levels ****/
@@ -77,9 +85,15 @@ label {
     }
 }
 
-.membership-levels div button {
-    border:none;
+.membership-levels-box button {
+    border: none;
     border-radius: 0 10px;
+}
+
+.membership-levels-box button:hover {
+    background-color: var(--tertiary-color);
+    color:white;
+    transition-duration: 0.5s;
 }
 
 #membershipDialog div {
