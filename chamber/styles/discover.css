@@ -1,0 +1,8 @@
+#place-cards {
+    display:grid;
+    gap: 1em;
+}
+
+#place-cards section figure {
+    margin:0;
+}
