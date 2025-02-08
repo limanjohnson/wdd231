@@ -88,3 +88,13 @@
     margin: 1rem 0;
     background-color: #f9f9f9;
 }
+
+@media screen and (min-width: 1700px) {
+    #sidebar-message{
+        position:fixed;
+        top: 100px;
+        left: 10px;
+        width: 200px;
+        height: auto;
+    }
+}
