@@ -49,3 +49,10 @@
 .ln-discover-images {
     border-radius:10px;
 }
+
+#sidebar-message {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    margin: 1rem 0;
+    background-color: #f9f9f9;
+}

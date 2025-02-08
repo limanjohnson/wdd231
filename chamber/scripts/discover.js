@@ -2,9 +2,6 @@ import { places } from "../data/places.mjs";
 import setupNavigationMenu from './navigateMenu.js';
 import getDate from './lastModified.js';
 
-setupNavigationMenu();
-getDate();
-
 let allPlaces = [];
 
 const displayPlaces = (locations) => {
@@ -53,4 +50,47 @@ async function getPlaceData() {
     console.table(allPlaces);
 }
 
-getPlaceData();
+document.addEventListener('DOMContentLoaded', () => {
+    setupNavigationMenu();
+    getDate();
+
+    getPlaceData();
+
+    const sidebarMessageContainer = document.createElement('div');
+    sidebarMessageContainer.id = "sidebar-message"
+
+    // current timestamp
+    const currentTimestamp = Date.now();
+
+    // check last visit to page
+    const lastVisit = localStorage.getItem('lastVisit');
+
+    // message to display based on last visit
+    if (!lastVisit) {
+        // first visit
+        sidebarMessageContainer.innerText = "Welcome! Let us know if you have any questions."
+    } else {
+        // difference in days between the visits
+        const timeDifference = currentTimestamp - parseInt(lastVisit, 10);
+        const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+
+        if (timeDifference < 24 * 60 * 60 * 1000) {
+            sidebarMessageContainer.innerText = "Back so soon! Awesome!";
+        } else if (daysDifference === 1) {
+            sidebarMessageContainer.innerText = "You last visited 1 day ago.";
+        } else {
+            sidebarMessageContainer.innerText = `You last visited ${daysDifference} days ago.`;
+        }
+    }
+
+    localStorage.setItem("lastVisit", currentTimestamp.toString());
+
+    const pageHeading = document.querySelector( ".page-heading-container h2")
+
+    pageHeading.appendChild(sidebarMessageContainer);
+
+    // const mainContent = document.querySelector('main');
+    // if (mainContent) {
+    //     mainContent.insertBefore(sidebarMessageContainer, mainContent.firstChild);
+    // }
+})
