@@ -97,6 +97,12 @@ header {
     font-weight:600;
 }
 
+.nav-menu nav a:hover {
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+    transition-duration: 0.5s;
+}
+
 header {
     display: flex;
     justify-content: space-between;

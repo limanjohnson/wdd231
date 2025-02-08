@@ -6,6 +6,7 @@
         "image image info info"
         "image image address address"
         "image image button button"
+        "image image none none"
     }
 
 
@@ -40,7 +41,11 @@
     justify-content:center;
     grid-area: button;
     height:24px;
-    width:25vw;
-    margin:1em auto;
+    width:10em;
+    margin:1em 0;
     padding:1em;
+}
+
+.ln-discover-images {
+    border-radius:10px;
 }
