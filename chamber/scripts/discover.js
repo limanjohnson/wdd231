@@ -23,6 +23,7 @@ const displayPlaces = (locations) => {
         let displayCaption = document.createElement('figcaption');
         let description = document.createElement('p');
         let address = document.createElement('address');
+        let learnMoreButton = document.createElement('button');
 
         displayImage.setAttribute('class', "ln-discover-images");
 
@@ -32,11 +33,14 @@ const displayPlaces = (locations) => {
         description.innerHTML = location.description;
         address.innerHTML = location.address;
 
+        learnMoreButton.innerHTML = "Learn More";
+
         imageContainer.appendChild(displayImage);
         imageContainer.appendChild(displayCaption);
         card.appendChild(imageContainer);
         card.appendChild(description);
         card.appendChild(address);
+        card.appendChild(learnMoreButton);
 
         cards.appendChild(card);
     });

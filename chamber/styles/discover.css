@@ -1,8 +1,46 @@
+@media screen and (min-width: 1201px) {
+
+    #place-cards section {
+        display:grid;
+        grid-template-areas:
+        "image image info info"
+        "image image address address"
+        "image image button button"
+    }
+
+
+}
+
 #place-cards {
     display:grid;
     gap: 1em;
 }
 
+#place-cards section {
+    margin-left:1em;
+    margin-right:1em;
+    padding:1em;
+}
+
 #place-cards section figure {
-    margin:0;
+    grid-area: image;
+}
+
+#place-cards section p {
+    grid-area: info;
+}
+
+#place-cards section address {
+    grid-area: address;
+}
+
+#place-cards section button {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    grid-area: button;
+    height:24px;
+    width:25vw;
+    margin:1em auto;
+    padding:1em;
 }
