@@ -50,9 +50,11 @@ async function getPlaceData() {
     console.table(allPlaces);
 }
 
+setupNavigationMenu();
+getDate();
+
 document.addEventListener('DOMContentLoaded', () => {
-    setupNavigationMenu();
-    getDate();
+
 
     getPlaceData();
 
@@ -88,9 +90,4 @@ document.addEventListener('DOMContentLoaded', () => {
     const pageHeading = document.querySelector( ".page-heading-container h2")
 
     pageHeading.appendChild(sidebarMessageContainer);
-
-    // const mainContent = document.querySelector('main');
-    // if (mainContent) {
-    //     mainContent.insertBefore(sidebarMessageContainer, mainContent.firstChild);
-    // }
 })
