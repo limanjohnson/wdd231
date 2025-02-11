@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lead Vault</title>
+
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/sidebar.css">
+</head>
+<body>
+
+<div class="sidebar">
+    <a class="nav-item active" href="addlead.html">Add Lead</a>
+    <a class="nav-item" href="viewleads.html">View Leads</a>
+    <a class="nav-item" href="#">Third Tab</a>
+    <a class="nav-item" href="#">Fourth Tab</a>
+</div>
+
+<div class="page-content">
+    <h1>Capture Lead</h1>
+    <hr class="rounded">
+
+    <!-- Lead Capture Form -->
+    <form id="leadForm">
+        <input type="text" id="firstName" placeholder="First Name" required autocomplete="given-name">
+        <input type="text" id="lastName" placeholder="Last Name" required autocomplete="family-name">
+        <input type="text" id="organization" placeholder="Organization" required>
+        <input type="email" id="email" placeholder="Email Address" required autocomplete="email">
+        <input type="tel" id="phone" placeholder="Phone Number" required autocomplete="on">
+        <label for="notes">Notes (optional)</label>
+        <textarea id="notes" rows="10"></textarea>
+        <label class="checkbox-container">
+            <input type="checkbox" id="addAddressToggle">
+            Add Address?
+        </label>
+        <div id="addressFields" style="display: none;">
+            <input type="text" id="streetAddress" placeholder="Street Address">
+            <input type="text" id="city" placeholder="City">
+            <input type="text" id="state" placeholder="State">
+            <input type="text" id="zip" placeholder="Zip">
+            <input type="text" id="country" placeholder="Country">
+        </div>
+
+        <button type="submit">Add Lead</button>
+    </form>
+
+</div>
+
+<script src="scripts/general.js" defer></script>
+<script src="scripts/addLead.js" defer></script>
+</body>
+</html>

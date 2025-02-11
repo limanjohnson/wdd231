@@ -1,0 +1,91 @@
+/* Google-inspired clean look */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background: #f4d06f;
+    color: #333333;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition-duration:.5s;
+}
+
+button:hover {
+    background: #D4A5A5;
+}
+
+hr.rounded {
+    border-top: 5px solid #5F9EA0;
+    /*border-radius: 5px;*/
+}
+
+.checkbox-container {
+    margin: 1em 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkbox-container:hover {
+    background: #eee;
+    cursor: pointer;
+}
+
+.checkbox-container input[type="checkbox"] {
+    display:none;
+}
+
+#addressFields {
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Lead List */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #fff;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.delete-btn {
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}

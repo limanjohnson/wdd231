@@ -1,0 +1,70 @@
+/* Sidebar navigation menu */
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+/* Sidebar links */
+.sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    transition-duration:.5s;
+}
+
+/* Active/current link */
+.sidebar a.active {
+    background-color: #f4d06f;
+    color: #333;
+}
+
+/* Links on mouse-over */
+.sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
+/* Page content. Margin-left property should match value of sidebar's width property */
+div.page-content {
+    margin: 0 auto;
+    padding: 1px 16px;
+    height: 1000px;
+    max-width:500px;
+}
+
+/* Screens less than 700 px wide, make the sidebar into a topbar */
+@media screen and (max-width: 930px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        display:flex;
+        justify-content:center;
+    }
+    .sidebar a {float: left;}
+    div.page-content{
+
+        display:block;
+
+        margin: 0 auto;
+
+    }
+}
+
+/* Screens less than 400px, display the bar vertically */
+@media screen and (max-width: 400px) {
+    .sidebar a {
+        text-align: center;
+        float: none;
+    }
+
+    div.page-content {
+        display:block;
+    }
+}
