@@ -25,6 +25,21 @@
     <ul id="leadList"></ul>
 </div>
 
+<div id="view-modal" class="modal">
+    <div class="modal-content">
+        <span id="close-btn">&times;</span>
+        <h2>View Entry</h2>
+        <input class="ln-view-entry-item" type="text" id="firstName" placeholder="First Name">
+        <input class="ln-view-entry-item" type="text" id="lastName" placeholder="Last Name">
+        <input class="ln-view-entry-item" type="text" id="organizationName" placeholder="Organization">
+        <input class="ln-view-entry-item" type="email" id="email" placeholder="Email Address">
+        <input class="ln-view-entry-item" type="tel" id="phone" placeholder="Phone Number">
+        <textarea class="ln-view-entry-item" id="notes" rows="10"></textarea>
+        <button class="ln-view-entry-item" id="save-edit-btn">Save Changes</button>
+        <div id="saveNotification" class="notification">Changes Saved!</div>
+    </div>
+</div>
+
 <script src="scripts/general.js" defer></script>
 <script src="scripts/viewLeads.js" defer></script>
 </body>
