@@ -4,6 +4,11 @@ body {
     background-color: #f4f4f4;
 }
 
+main {
+    margin-bottom: 2em;
+    overflow: scroll;
+}
+
 h1, h2 {
     color: #333;
 }
@@ -89,4 +94,14 @@ ul {
     border: solid #333 1px;
     border-radius: 5px;
     cursor: pointer;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    overflow: auto;
+    background-color: #f4d06f;
+    padding: 1em 1em;
+    z-index: 1000;
 }
