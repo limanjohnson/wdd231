@@ -40,6 +40,10 @@ div.page-content {
     max-width:500px;
 }
 
+.mobile-menu {
+    display:none;
+}
+
 /* Screens less than 700 px wide, make the sidebar into a topbar */
 @media screen and (max-width: 930px) {
     .sidebar {
@@ -64,10 +68,13 @@ div.page-content {
 }
 
 /* Screens less than 400px, display the bar vertically */
-@media screen and (max-width: 400px) {
-    .sidebar a {
-        text-align: center;
-        float: none;
+@media screen and (max-width: 768px) {
+    .sidebar {
+        display:none;
+    }
+
+    .mobile-menu {
+        display:block;
     }
 
     div.page-content {
