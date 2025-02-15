@@ -21,14 +21,14 @@ async function scheduleEvent(event) {
     };
 
     events.push(newEvent); // Add new event to the list
-    localStorage.setTime("leadEvents", JSON.stringify(events));
+    localStorage.setItem("leadEvents", JSON.stringify(events));
 
     alert("Event added!");
     closeModal("addEventModal");
     fetchEvents();
 
     try {
-        await email.js.send(
+        await emailjs.send(
             "service_brlzawe",
             "template_5zgpg7r",
             {

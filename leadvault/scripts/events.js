@@ -10,7 +10,6 @@ function fetchEvents() {
             <td>${event.lead_name}</td>
             <td>${event.event_type}</td>
             <td>${new Date(event.date_time).toLocaleString()}</td>
-            <td>${event.reminder_sent ? "Sent" : "Not Sent"}</td>
             <td class="action-buttons">
                 <button onclick="editEvent(${event.id})">Edit</button>
                 <button onclick="deleteEvent(${event.id})">Delete</button>
@@ -29,7 +28,6 @@ function scheduleEvent(event) {
     const leadName = document.getElementById("leadName").value;
     const eventType = document.getElementById("eventType").value;
     const dateTime = document.getElementById("dateTime").value;
-    const reminder = document.getElementById("reminder").checked;
 
     if (!leadName || !eventType || !dateTime) {
         alert("Please fill out all fields!");
@@ -43,7 +41,6 @@ function scheduleEvent(event) {
         lead_name: leadName,
         event_type: eventType,
         date_time: new Date(dateTime).toISOString(),
-        reminder_sent: reminder,
     };
 
     events.push(newEvent); // Add new event to the list
@@ -78,7 +75,6 @@ function editEvent(eventId) {
     document.getElementById("leadName").value = event.lead_name;
     document.getElementById("eventType").value = event.event_type;
     document.getElementById("dateTime").value = event.date_time;
-    document.getElementById("reminder").checked = event.reminder_sent;
 
     // Remove the old event and save the updated version on form submission
     events.splice(events.indexOf(event), 1);
@@ -99,7 +95,6 @@ function closeModal(id) {
     document.getElementById("leadName").value = "";
     document.getElementById("eventType").value = "";
     document.getElementById("dateTime").value = "";
-    document.getElementById("reminder").checked = false;
 }
 
 // Load events on page load
