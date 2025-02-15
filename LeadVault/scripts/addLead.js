@@ -16,16 +16,24 @@ document.addEventListener('DOMContentLoaded', () => {
         const email = document.getElementById('email').value.trim();
         const phone = document.getElementById('phone').value.trim();
         const notes = document.getElementById('notes').value.trim();
+        // const streetAddress = document.getElementById('streetAddress').value.trim();
+        // const city = document.getElementById('city').value.trim();
+        // const state = document.getElementById('state').value.trim();
+        // const zip = document.getElementById('zip').value.trim();
+        // const country = document.getElementById('country').value.trim();
+        let streetAddress = document.getElementById('streetAddress').value.trim();
+        let city = document.getElementById('city').value.trim();
+        let state = document.getElementById('state').value.trim();
+        let zip = document.getElementById('zip').value.trim();
+        let country = document.getElementById('country').value.trim();
 
-        let address = "";
-        if (addAddressToggle.checked) {
-            streetAddress = document.getElementById('streetAddress').value.trim();
-            city = document.getElementById('city').value.trim();
-            state = document.getElementById('state').value.trim();
-            zip = document.getElementById('zip').value.trim();
-            country = document.getElementById('country').value.trim();
-            address = `${streetAddress}, \n${city}, ${state}, \n${zip}, \n${country}`;
-        }
+        // if (addAddressToggle.checked) {
+        //     let streetAddress = document.getElementById('streetAddress').value.trim();
+        //     const city = document.getElementById('city').value.trim();
+        //     const state = document.getElementById('state').value.trim();
+        //     const zip = document.getElementById('zip').value.trim();
+        //     const country = document.getElementById('country').value.trim();
+        // }
 
         if (firstName && lastName && organizationName && email && phone) {
             const lead = {
@@ -35,7 +43,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 email,
                 phone,
                 notes,
-                address
+                streetAddress,
+                city,
+                state,
+                zip,
+                country,
             };
             saveLead(lead)
             leadForm.reset();

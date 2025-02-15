@@ -2,7 +2,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
 
     const leadList = document.querySelector('#leadList');
     const modal = document.querySelector('#view-modal');
-    const modalContent = document.querySelector('#modal-content');
+    // const modalContent = document.querySelector('#modal-content');
     const closeModal = document.querySelector('#close-btn');
     const firstName = document.querySelector('#firstName');
     const lastName = document.querySelector('#lastName');
@@ -11,6 +11,13 @@ document.addEventListener( 'DOMContentLoaded', () => {
     const email = document.querySelector('#email');
     const notes = document.querySelector('#notes');
     const saveBtn = document.querySelector('#save-edit-btn')
+    const streetAddress = document.querySelector('#streetAddress');
+    const city = document.querySelector('#city');
+    const state = document.querySelector('#state');
+    const zip = document.querySelector('#zip');
+    const country = document.querySelector('#country');
+
+    let currentLeadIndex = null;
 
     window.onload = function() {
         loadLeads();
@@ -26,8 +33,8 @@ document.addEventListener( 'DOMContentLoaded', () => {
         }
 
         leads.forEach((lead, index) => {
-          const li = document.createElement('li');
-          li.innerHTML = `
+            const li = document.createElement('li');
+            li.innerHTML = `
             <div class="leads-identity">
                 <p>${lead.firstName} ${lead.lastName} | ${lead.organizationName}</p>
             </div>
@@ -57,41 +64,58 @@ document.addEventListener( 'DOMContentLoaded', () => {
         // open modal with the lead information
         function openModal(lead, index) {
             modal.classList.add("active");
+
+            // populate form fields with lead's data
             firstName.value = lead.firstName;
             lastName.value = lead.lastName;
             organizationName.value = lead.organizationName;
             phone.value = lead.phone;
             email.value = lead.email;
-            notes.value = lead.notes || [];
+            notes.value = lead.notes || "";
             if (notes.value === "") {
                 notes.value = "No notes";
             }
+            streetAddress.value = lead.streetAddress || "";
+            city.value = lead.city || "";
+            state.value = lead.state || "";
+            zip.value = lead.zip || "";
+            country.value = lead.country || "";
 
-            saveBtn.addEventListener("click", function () {
-                saveChanges(lead.id, index);
-            });
+            // Track index of the lead being edited
+            currentLeadIndex = index;
         }
 
-        function saveChanges(leadId, index) {
+        saveBtn.addEventListener("click", function () {
+            if (currentLeadIndex !== null) {
+                saveChanges(currentLeadIndex);
+            }
+        });
+
+        function saveChanges(index) {
             const leads = JSON.parse(localStorage.getItem("leads")) || [];
-            const updatedLeads = leads.map(lead => {
-                if (lead.id === leadId) {
-                    lead.firstName = firstName.value;
-                    lead.lastName = lastName.value;
-                    lead.organizationName = organizationName.value;
-                    lead.phone = phone.value;
-                    lead.email = email.value;
-                    lead.notes = notes.value;
-                }
-                return lead;
-            });
 
-            localStorage.setItem("leads", JSON.stringify(updatedLeads));
+            leads[index] = {
+                ...leads[index],
+                firstName: firstName.value,
+                lastName: lastName.value,
+                organizationName: organizationName.value,
+                phone: phone.value,
+                email: email.value,
+                notes: notes.value || "No notes",
+                streetAddress: streetAddress.value || "",
+                city: city.value || "",
+                state: state.value || "",
+                zip: zip.value || "",
+                country: country.value || "",
+            };
 
-            // close modal and reload leads
-            // modal.classList.remove("active")
+            localStorage.setItem("leads", JSON.stringify(leads));
+
             loadLeads();
+            // modal.classList.remove("active");
         }
+
+    }
 
         function showSaveNotification() {
             const notification = document.getElementById("saveNotification");
@@ -121,7 +145,6 @@ document.addEventListener( 'DOMContentLoaded', () => {
                 modal.classList.remove("active");
             }
         };
-    }
 
     function deleteLead(index) {
         let leads = JSON.parse(localStorage.getItem("leads")) || [];
