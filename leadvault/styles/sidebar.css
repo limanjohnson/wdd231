@@ -37,7 +37,14 @@ div.page-content {
     margin: 0 auto;
     padding: 1px 16px;
     height: 1000px;
-    max-width:500px;
+    max-width:600px;
+}
+
+.event-page-content {
+    margin: 0 auto;
+    padding: 1px 16px;
+    height: 1000px;
+    max-width:1000px;
 }
 
 .mobile-menu {

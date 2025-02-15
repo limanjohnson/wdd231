@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="styles/sidebar.css">
   <link rel="stylesheet" href="styles/modal.css">
   <link rel="stylesheet" href="styles/hamburger-menu.css">
+  <link rel="stylesheet" href="styles/createEvent.css">
+
 </head>
 <body>
 
@@ -37,11 +39,11 @@
 </header>
 <main>
 
-  <div class="page-content">
+  <div class="event-page-content">
     <h2>Scheduled Events</h2>
     <table>
       <thead>
-      <tr>
+      <tr class="event-row">
         <th>Lead</th>
         <th>Event Type</th>
         <th>Date & Time</th>
@@ -79,5 +81,9 @@
 
 <script src="scripts/events.js" defer></script>
 <script src="scripts/general.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+  emailjs.init("mn8SWFRKkYQvndQsZ");
+</script>
 </body>
 </html>

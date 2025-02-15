@@ -1,0 +1,25 @@
+#eventsTable tr td button {
+    width: 5em;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.event-page-content table {
+    background: white;
+    padding: 1em;
+    border-radius: 5px;
+    margin-bottom:1em;
+}
+
+.event-row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin-bottom: 2em;
+    border: 1px solid #333;
+    padding: 8px;
+}
+
