@@ -34,7 +34,7 @@ function editEvent(eventId) {
 
 // Open modal
 function openModal(id) {
-    document.getElementById(id).style.display = 'block';
+    document.getElementById(id).style.display = 'flex';
 }
 
 // Close modal

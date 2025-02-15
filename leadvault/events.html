@@ -37,27 +37,6 @@
 </header>
 <main>
 
-
-  <div id="addEventModal" class="modal">
-    <div class="modal-content">
-      <span class="close-button" onclick="closeModal('addEventModal')">&times;</span>
-      <h2>Schedule Event</h2>
-      <form id="eventForm" onsubmit="scheduleEvent(event)">
-        <label for="leadName">Lead Name:</label>
-        <input type="text" id="leadName" required>
-        <label for="eventType">Event Type:</label>
-        <input type="text" id="eventType" required>
-        <label for="dateTime">Date & Time:</label>
-        <input type="datetime-local" id="dateTime" required>
-        <label for="reminder">Send Reminder:</label>
-        <input type="checkbox" id="reminder">
-        <button type="submit" class="button">Add Event</button>
-      </form>
-    </div>
-  </div>
-  <button class="button" onclick="openModal('addEventModal')">Add Event</button>
-
-
   <div class="page-content">
     <h2>Scheduled Events</h2>
     <table>
@@ -74,6 +53,24 @@
 
       </tbody>
     </table>
+    <div id="addEventModal" class="modal">
+      <div class="modal-content">
+        <span id="close-btn" onclick="closeModal('addEventModal')">&times;</span>
+        <h2>Schedule Event</h2>
+        <form id="eventForm" onsubmit="scheduleEvent(event)">
+          <label for="leadName">Lead Name:</label>
+          <input type="text" id="leadName" required>
+          <label for="eventType">Event Type:</label>
+          <input type="text" id="eventType" required>
+          <label for="dateTime">Date & Time:</label>
+          <input type="datetime-local" id="dateTime" required>
+          <label for="reminder">Send Reminder:</label>
+          <input type="checkbox" id="reminder">
+          <button type="submit" class="button">Add Event</button>
+        </form>
+      </div>
+    </div>
+    <button class="button" onclick="openModal('addEventModal')">Add Event</button>
   </div>
 </main>
 <footer>
