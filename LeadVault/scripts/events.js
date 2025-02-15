@@ -32,5 +32,53 @@ function editEvent(eventId) {
     alert("Edit function not implement yet!")
 }
 
+// Open modal
+function openModal(id) {
+    document.getElementById(id).style.display = 'block';
+}
+
+// Close modal
+function closeModal(id) {
+    document.getElementById(id).style.display = 'none';
+}
+
+// Handle form submission
+async function scheduleEvent(event) {
+    event.preventDefault(); // Prevent form reload
+
+    const leadName = document.getElementById("leadName").value;
+    const eventType = document.getElementById("eventType").value;
+    const dateTime = document.getElementById("dateTime").value;
+    const reminder = document.getElementById("reminder").checked;
+
+    // Construct the event object
+    const newEvent = {
+        lead_name: leadName,
+        event_type: eventType,
+        date_time: new Date(dateTime).toISOString(),
+        reminder_sent: reminder,
+    };
+
+    // Send a POST request to save the event
+    try {
+        const response = await fetch('https://lead-capture-backend.onrender.com/events', {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(newEvent),
+        });
+
+        if (response.ok) {
+            alert("Event added successfully!");
+            closeModal('addEventModal');
+            fetchEvents(); // Reload events
+        } else {
+            alert("Error adding event.");
+        }
+    } catch (error) {
+        console.error("Error:", error);
+        alert("Something went wrong!");
+    }
+}
+
 // load events on page load
 document.addEventListener("DOMContentLoaded", fetchEvents);
