@@ -26,12 +26,16 @@
     position: relative;
 }
 
+.modal-content label {
+    display: flex;
+}
+
 .ln-view-entry-item {
     margin-bottom: 10px;
 }
 
 #close-btn {
-    cursor: pointer; /* Fixed the typo */
+    cursor: pointer;
     position: absolute;
     top: 10px;
     right: 15px;
