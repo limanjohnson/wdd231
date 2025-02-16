@@ -9,9 +9,9 @@ function fetchEvents() {
         row.innerHTML = `
             <td>${event.lead_name}</td>
             <td>${event.event_type}</td>
-            <td>${new Date(event.date_time).toLocaleString()}</td>
+            <td class="event-time">${new Date(event.date_time).toLocaleDateString()}</td>
             <td class="action-buttons">
-                <button onclick="editEvent(${event.id})">Edit</button>
+                <button onclick="editEvent(${event.id})">View</button>
                 <button onclick="deleteEvent(${event.id})">Delete</button>
             </td>
         `;
@@ -74,12 +74,12 @@ function editEvent(eventId) {
     // Pre-fill the modal with event data
     document.getElementById("leadName").value = event.lead_name;
     document.getElementById("eventType").value = event.event_type;
-    document.getElementById("dateTime").value = event.date_time;
+    document.getElementById("dateTime").value = new Date(event.date_time).toISOString().slice(0, 16); // To match input[type="datetime-local"]
 
-    // Remove the old event and save the updated version on form submission
-    events.splice(events.indexOf(event), 1);
-    localStorage.setItem("leadEvents", JSON.stringify(events)); // Temporarily remove the event
+    // Temporarily store the event ID in the modal to track editing
+    document.getElementById("saveEventButton").dataset.eventId = eventId;
 
+    // Open the modal
     openModal("addEventModal");
 }
 
