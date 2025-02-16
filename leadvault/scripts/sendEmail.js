@@ -18,7 +18,7 @@ async function scheduleEvent(event) {
         id: Date.now(), //current timestamp as a unique ID
         lead_name: leadName,
         event_type: eventType,
-        date_time: new Date(dateTime).toISOString(),
+        event_date: new Date(dateTime).toISOString(),
     };
 
     events.push(newEvent); // Add new event to the list
@@ -35,7 +35,7 @@ async function scheduleEvent(event) {
             {
                 lead_name: leadName,
                 event_type: eventType,
-                date_time: new Date(dateTime).toLocaleString(),
+                event_date: new Date(dateTime).toLocaleDateString(),
             }
         );
         alert("Email notifitcation sent!")
