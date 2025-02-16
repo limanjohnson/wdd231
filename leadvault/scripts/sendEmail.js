@@ -18,7 +18,7 @@ async function scheduleEvent(event) {
         id: Date.now(), //current timestamp as a unique ID
         lead_name: leadName,
         event_type: eventType,
-        event_date: new Date(dateTime).toISOString(),
+        date_time: new Date(dateTime).toISOString(),
     };
 
     events.push(newEvent); // Add new event to the list
