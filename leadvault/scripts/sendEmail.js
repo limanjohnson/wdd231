@@ -5,6 +5,7 @@ async function scheduleEvent(event) {
     const leadName = document.getElementById("leadName").value;
     const eventType = document.getElementById("eventType").value;
     const dateTime = document.getElementById("dateTime").value;
+    // const formattedDateTime = new Date(dateTime).toLocaleDateString();
 
     if (!leadName || !eventType || !dateTime) {
         alert("Please fill out all fields!");
