@@ -5,13 +5,13 @@ function fetchEvents() {
     tableBody.innerHTML = ""; // Clear the table before reloading
 
     events.forEach(event => {
+        const eventDate = new Date(event.date_time);
         const row = document.createElement("tr");
         row.innerHTML = `
             <td>${event.lead_name}</td>
             <td>${event.event_type}</td>
-            <td class="event-time">${new Date(event.date_time).toLocaleDateString()}</td>
+            <td class="event-time">${eventDate.toLocaleString()}</td>
             <td class="action-buttons">
-                <button onclick="editEvent(${event.id})">View</button>
                 <button onclick="deleteEvent(${event.id})">Delete</button>
             </td>
         `;
@@ -34,19 +34,38 @@ function scheduleEvent(event) {
         return;
     }
 
-    // Get existing events
-    const events = JSON.parse(localStorage.getItem("leadEvents")) || [];
-    const newEvent = {
-        id: Date.now(), // Use current timestamp as a unique ID
-        lead_name: leadName,
-        event_type: eventType,
-        date_time: new Date(dateTime).toISOString(),
-    };
+    const eventId = document.getElementById("saveEventButton").dataset.eventId;
 
-    events.push(newEvent); // Add new event to the list
+    let events = JSON.parse(localStorage.getItem("leadEvents")) || [];
+
+    const localDateTime = new Date(dateTime);
+
+    if (eventId) {
+        const eventIndex = events.findIndex(event => event.id === parseInt(eventId, 10));
+
+        if (eventIndex !== -1) {
+            events[eventIndex] = {
+                ...events[eventIndex],
+                lead_name: leadName,
+                event_type: eventType,
+                date_time: localDateTime.toString(),
+            };
+        } else {
+            alert("Failed to update event. Event not found!");
+        }
+    } else {
+        const newEvent = {
+            id: Date.now(), // this creates a unique id
+            lead_name: leadName,
+            event_type: eventType,
+            date_time: localDateTime.toString(),
+        };
+        events.push(newEvent);
+    }
+
     localStorage.setItem("leadEvents", JSON.stringify(events)); // Save updated list to localStorage
 
-    alert("Event added successfully!");
+    alert(eventId ? "Event updated!" : "Event added!");
     closeModal("addEventModal");
     fetchEvents(); // Reload the table
 }
@@ -61,27 +80,6 @@ function deleteEvent(eventId) {
     }
 }
 
-// Edit an event (basic implementation)
-function editEvent(eventId) {
-    const events = JSON.parse(localStorage.getItem("leadEvents")) || [];
-    const event = events.find(event => event.id === eventId);
-
-    if (!event) {
-        alert("Event not found!");
-        return;
-    }
-
-    // Pre-fill the modal with event data
-    document.getElementById("leadName").value = event.lead_name;
-    document.getElementById("eventType").value = event.event_type;
-    document.getElementById("dateTime").value = new Date(event.date_time).toISOString().slice(0, 16); // To match input[type="datetime-local"]
-
-    // Temporarily store the event ID in the modal to track editing
-    document.getElementById("saveEventButton").dataset.eventId = eventId;
-
-    // Open the modal
-    openModal("addEventModal");
-}
 
 // Open modal
 function openModal(id) {
@@ -95,6 +93,9 @@ function closeModal(id) {
     document.getElementById("leadName").value = "";
     document.getElementById("eventType").value = "";
     document.getElementById("dateTime").value = "";
+
+    // Remove event ID for tracking editing state
+    document.getElementById("saveEventButton").removeAttribute("data-event-id");
 }
 
 // Load events on page load
